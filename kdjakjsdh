@@ -1,0 +1,30 @@
+[33mcommit d3997122dffad4d2a69ea7295018be7a0736fa1a[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: 1e1c7ef 967042a
+Author: jackytran <bachtuvu.dev@gmail.com>
+Date:   Sun Dec 13 15:18:45 2020 +0700
+
+    Merge branch 'master' of https://github.com/JackyTran8594/spring-app-agriculture into main
+
+[33mcommit 967042a8924b4988ae908abb3a0430a678fcd7a9[m
+Author: bachtuvu <bachtuvu.dev@gmail.com>
+Date:   Sat Dec 12 00:53:08 2020 +0700
+
+    add nebular theme
+
+[33mcommit af0ecbe2cdc1204537cf0d560a45055da3682211[m
+Author: bachtuvu <bachtuvu.dev@gmail.com>
+Date:   Fri Dec 11 23:49:59 2020 +0700
+
+    delete branch main
+
+[33mcommit b9b821a5b9c05ea2c0bc655bbc4b8b1b1dcf7e98[m
+Author: jackytran <bachtuvu.dev@gmail.com>
+Date:   Fri Dec 11 19:49:22 2020 +0700
+
+    init app-agriculture
+
+[33mcommit 1e1c7efff664d0df70748aeb9ba4fe42ef10e157[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: JackyTran8594 <41407396+JackyTran8594@users.noreply.github.com>
+Date:   Fri Dec 11 19:46:58 2020 +0700
+
+    Initial commit
