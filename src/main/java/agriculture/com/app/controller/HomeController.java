@@ -1,14 +1,15 @@
 package agriculture.com.app.controller;
 
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RestController
+@Controller
+@RequestMapping("/")
 public class HomeController {
 
-	@RequestMapping("/")
 	public String index() {
-		return "Greetings from Spring Boot!";
+		return "forward:/index.html";
 	}
 
 }
