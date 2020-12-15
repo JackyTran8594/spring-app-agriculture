@@ -24,6 +24,13 @@ public class UserService {
         return users;
     }
 
+    public User getById(String id) {
+        Long _id = Long.parseLong(id);
+        var exist = userRepository.findById(_id);
+        User user = exist.get();
+        return user;
+    }
+
     public Long count() {
 
         return userRepository.count();
