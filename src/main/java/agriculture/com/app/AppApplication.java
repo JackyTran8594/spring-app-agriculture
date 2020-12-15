@@ -2,6 +2,8 @@ package agriculture.com.app;
 
 import java.util.stream.Stream;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,12 +12,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
-import agriculture.com.app.entities.User;
-import agriculture.com.app.repositories.UserRepository;
-
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
 @ComponentScan("agriculture.com.app.repositories")
 public class AppApplication {
+
+	private static final Logger LOGGER = LogManager.getLogger(AppApplication.class);
 
 	public static void main(String[] args) {
 		SpringApplication.run(AppApplication.class, args);

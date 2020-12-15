@@ -1,4 +1,4 @@
-package agriculture.com.app.entities;
+package agriculture.com.app.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,25 +10,33 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private final String name;
+    private final String firstName;
+    private final String lastName;
+
     private final String email;
 
     public User() {
-        this.name = "";
+        this.firstName = "";
+        this.lastName = "";
         this.email = "";
     }
 
-    public User(String name, String email) {
-        this.name = name;
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public User(String first_name, String last_name, String email) {
+        this.firstName = first_name;
+        this.lastName = last_name;
         this.email = email;
     }
 
     public long getId() {
         return id;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public String getEmail() {
@@ -37,7 +45,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", name=" + name + ", email=" + email + '}';
+        return "User{" + "id=" + id + ", name=" + firstName + " " + lastName + ", email=" + email + '}';
     }
     // standard constructors / setters / getters / toString
 }
