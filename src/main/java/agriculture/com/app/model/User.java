@@ -1,5 +1,6 @@
 package agriculture.com.app.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,10 +26,12 @@ public class User {
         this.email = "";
     }
 
+    @Column(name="lastName")
     public String getLastName() {
         return lastName;
     }
 
+    @Column(name="firstName")
     public String getFirstName() {
         return firstName;
     }
@@ -39,10 +42,12 @@ public class User {
         this.email = email;
     }
 
+    @Column(name="id")
     public long getId() {
         return id;
     }
 
+    @Column(name="email")
     public String getEmail() {
         return email;
     }
