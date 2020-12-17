@@ -1,7 +1,7 @@
 package agriculture.com.app.dto;
 
 public class UserDTO {
-    public long id;
+    public String id;
     public String firstName;
     public String lastName;
     public String email;

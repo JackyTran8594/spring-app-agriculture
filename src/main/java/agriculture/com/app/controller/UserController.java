@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -27,6 +28,7 @@ import org.apache.logging.log4j.Logger;
 
 @RestController
 // @CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("/api")
 public class UserController {
 
 	@Autowired
@@ -48,12 +50,12 @@ public class UserController {
 
 	}
 
-	@PostMapping("/users")
+	@PostMapping("/user")
 	@ResponseBody
-	public ResponseEntity postUser(User user) {
+	public ResponseEntity postUser(@RequestBody UserDTO user) {
 		try {
-			userService.save();
-			return new ResponseEntity<>(user, HttpStatus.OK);
+			userService.postUser(user);
+			return new ResponseEntity<>(HttpStatus.OK);
 		} catch (Exception e) {
 			// TODO: handle exception
 			LOGGER.info(e.getMessage() + "allUsers - usercontroller");
@@ -61,6 +63,21 @@ public class UserController {
 		}
 
 	}
+
+	@PutMapping("/user/{id}")
+	@ResponseBody
+	public ResponseEntity updateUser(@RequestBody UserDTO user, @PathVariable(value="id") String id) {
+		try {
+			userService.updateUser(user, id);
+			return new ResponseEntity<>(HttpStatus.OK);
+		} catch (Exception e) {
+			// TODO: handle exception
+			LOGGER.info(e.getMessage() + "allUsers - usercontroller");
+			return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+		}
+
+	}
+
 
 	@GetMapping("/users/count")
 	@ResponseBody
@@ -78,7 +95,7 @@ public class UserController {
 		}
 	}
 
-	@GetMapping("/users/{id}")
+	@GetMapping("/user/{id}")
 	@ResponseBody
 	public ResponseEntity getById(String id) {
 		try {
@@ -94,7 +111,7 @@ public class UserController {
 		}
 	}
 
-	@DeleteMapping("/users/{id}")
+	@DeleteMapping("/user/{id}")
 	public ResponseEntity<String> delete(@PathVariable String id) {
 
 		try {

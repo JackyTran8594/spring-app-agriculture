@@ -36,15 +36,16 @@ public class UserService {
         return user;
     }
 
-    public void postUser(UserDTO user) {
-        oMapper.userRepository.save(user);
+    public void postUser(UserDTO userDTO) {
+        User user = oMapper.convertValue(userDTO, User.class);
+        userRepository.save(user);
     }
 
-    public Long updateUser(UserDTO user) {
-        var exist = userRepository.findById(user.id);
-
+    public void updateUser(UserDTO userDTO, String id) {
+        Long uid = Long.parseLong(id);
+        User user = userRepository.findById(uid).get();
+        user = oMapper.convertValue(userDTO, User.class);
         userRepository.save(user);
-
     }
 
     public Long count() {
