@@ -2,6 +2,7 @@ package agriculture.com.app.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import agriculture.com.app.dto.UserDTO;
 import agriculture.com.app.model.User;
 
 import agriculture.com.app.repositories.UserRepository;
@@ -23,6 +24,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 @RestController
 // @CrossOrigin(origins = "http://localhost:4200")
 public class UserController {
@@ -37,6 +39,20 @@ public class UserController {
 	public ResponseEntity allUsers() {
 		try {
 			List<User> user = userService.findAll();
+			return new ResponseEntity<>(user, HttpStatus.OK);
+		} catch (Exception e) {
+			// TODO: handle exception
+			LOGGER.info(e.getMessage() + "allUsers - usercontroller");
+			return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+		}
+
+	}
+
+	@PostMapping("/users")
+	@ResponseBody
+	public ResponseEntity postUser(User user) {
+		try {
+			userService.save();
 			return new ResponseEntity<>(user, HttpStatus.OK);
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -78,7 +94,6 @@ public class UserController {
 		}
 	}
 
-
 	@DeleteMapping("/users/{id}")
 	public ResponseEntity<String> delete(@PathVariable String id) {
 
@@ -88,13 +103,13 @@ public class UserController {
 			return new ResponseEntity<>(HttpStatus.OK);
 
 		} catch (Exception e) {
-			
+
 			// TODO: handle exception
 			LOGGER.info(e.getMessage() + "delete - usercontroller");
 			return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
 
 		}
-	
+
 	}
 
 }

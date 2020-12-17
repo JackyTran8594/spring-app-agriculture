@@ -3,9 +3,12 @@ package agriculture.com.app.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import agriculture.com.app.dto.UserDTO;
 import agriculture.com.app.model.User;
 import agriculture.com.app.repositories.UserRepository;
 
@@ -13,6 +16,8 @@ import agriculture.com.app.repositories.UserRepository;
 public class UserService {
     @Autowired
     private UserRepository userRepository;
+
+    ObjectMapper oMapper = new ObjectMapper();
 
     public List<User> findAll() {
 
@@ -29,6 +34,17 @@ public class UserService {
         var exist = userRepository.findById(_id);
         User user = exist.get();
         return user;
+    }
+
+    public void postUser(UserDTO user) {
+        oMapper.userRepository.save(user);
+    }
+
+    public Long updateUser(UserDTO user) {
+        var exist = userRepository.findById(user.id);
+
+        userRepository.save(user);
+
     }
 
     public Long count() {
