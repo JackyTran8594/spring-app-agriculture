@@ -6,6 +6,7 @@ import java.util.List;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import agriculture.com.app.dto.UserDTO;
@@ -13,11 +14,12 @@ import agriculture.com.app.model.User;
 import agriculture.com.app.repositories.UserRepository;
 
 @Service
+@Component
 public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    ObjectMapper oMapper = new ObjectMapper();
+    private ObjectMapper oMapper = new ObjectMapper();
 
     public List<User> findAll() {
 
@@ -43,9 +45,10 @@ public class UserService {
 
     public void updateUser(UserDTO userDTO, String id) {
         Long uid = Long.parseLong(id);
-        User user = userRepository.findById(uid).get();
-        user = oMapper.convertValue(userDTO, User.class);
-        userRepository.save(user);
+        var exist = userRepository.findById(uid).get();
+        exist = oMapper.convertValue(userDTO, User.class);
+        // user = oMapper.convertValue(userDTO, User.class);
+        userRepository.save(exist);
     }
 
     public Long count() {

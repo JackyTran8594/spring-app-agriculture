@@ -7,8 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
-
 @Entity
 @Table(name = "User")
 public class User {
@@ -26,12 +24,12 @@ public class User {
         this.email = "";
     }
 
-    @Column(name="lastName")
+    @Column(name = "lastName")
     public String getLastName() {
         return lastName;
     }
 
-    @Column(name="firstName")
+    @Column(name = "firstName")
     public String getFirstName() {
         return firstName;
     }
@@ -42,12 +40,12 @@ public class User {
         this.email = email;
     }
 
-    @Column(name="id")
+    @Column(name = "id")
     public long getId() {
         return id;
     }
 
-    @Column(name="email")
+    @Column(name = "email")
     public String getEmail() {
         return email;
     }

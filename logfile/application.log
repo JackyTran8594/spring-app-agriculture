@@ -1380,3 +1380,577 @@ Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/annotation/Json
 2020-12-17T22:57:41.065+0700 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-12-17T22:57:41.066+0700 INFO Initializing Servlet 'dispatcherServlet'
 2020-12-17T22:57:41.068+0700 INFO Completed initialization in 2 ms
+2020-12-18T12:51:43.255+0700 INFO Starting AppApplication using Java 11.0.8 on DESKTOP-PDEE0N6 with PID 1876 (C:\Users\TRANTUANVU\Desktop\spring-app-agriculture\target\classes started by TRANTUANVU in C:\Users\TRANTUANVU\Desktop\spring-app-agriculture)
+2020-12-18T12:51:43.324+0700 INFO No active profile set, falling back to default profiles: default
+2020-12-18T12:51:46.415+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-18T12:51:46.608+0700 INFO Finished Spring Data repository scanning in 169 ms. Found 1 JPA repository interfaces.
+2020-12-18T12:51:47.942+0700 INFO Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:47.953+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.support.PluginRegistryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:47.990+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.OrderAwarePluginRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.019+0700 INFO Bean '_relProvider' of type [org.springframework.hateoas.server.core.DelegatingLinkRelationProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.076+0700 INFO Bean 'messageResolver' of type [org.springframework.hateoas.mediatype.MessageSourceResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.079+0700 INFO Bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration' of type [org.springframework.data.web.config.SpringDataJacksonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.108+0700 INFO Bean 'jacksonGeoModule' of type [org.springframework.data.geo.GeoModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.151+0700 INFO Bean 'org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.171+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.177+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.243+0700 INFO Bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' of type [org.springframework.boot.autoconfigure.jackson.JacksonProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.251+0700 INFO Bean 'standardJacksonObjectMapperBuilderCustomizer' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.294+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.310+0700 INFO Bean 'parameterNamesModule' of type [com.fasterxml.jackson.module.paramnames.ParameterNamesModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.329+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.393+0700 INFO Bean 'jsonComponentModule' of type [org.springframework.boot.jackson.JsonComponentModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.408+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.431+0700 INFO Bean 'spring.data.rest-org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.468+0700 INFO Bean 'springBootRepositoryRestConfigurer' of type [org.springframework.boot.autoconfigure.data.rest.SpringBootRepositoryRestConfigurer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.472+0700 INFO Bean 'configurerDelegate' of type [org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerDelegate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.485+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.527+0700 INFO Bean 'stringHttpMessageConverter' of type [org.springframework.http.converter.StringHttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.557+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.577+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.785+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.856+0700 INFO Bean 'jacksonObjectMapper' of type [com.fasterxml.jackson.databind.ObjectMapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.934+0700 INFO Bean 'mappingJackson2HttpMessageConverter' of type [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:48.937+0700 INFO Bean 'org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration' of type [org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:51:50.394+0700 INFO Tomcat initialized with port(s): 8090 (http)
+2020-12-18T12:51:50.416+0700 INFO Initializing ProtocolHandler ["http-nio-8090"]
+2020-12-18T12:51:50.417+0700 INFO Starting service [Tomcat]
+2020-12-18T12:51:50.419+0700 INFO Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-18T12:51:50.845+0700 INFO Initializing Spring embedded WebApplicationContext
+2020-12-18T12:51:50.846+0700 INFO Root WebApplicationContext: initialization completed in 7140 ms
+2020-12-18T12:51:51.948+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-18T12:51:52.452+0700 INFO HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-18T12:51:53.079+0700 INFO HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-18T12:51:53.570+0700 INFO HikariPool-1 - Starting...
+2020-12-18T12:51:55.672+0700 INFO HikariPool-1 - Start completed.
+2020-12-18T12:51:55.882+0700 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-18T12:51:59.053+0700 INFO HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-18T12:51:59.079+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-18T12:51:59.254+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-18T12:52:01.383+0700 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-18T12:52:01.956+0700 INFO Adding welcome page: class path resource [static/index.html]
+2020-12-18T12:52:03.169+0700 INFO Starting ProtocolHandler ["http-nio-8090"]
+2020-12-18T12:52:03.387+0700 INFO Tomcat started on port(s): 8090 (http) with context path ''
+2020-12-18T12:52:03.422+0700 INFO Started AppApplication in 21.338 seconds (JVM running for 26.239)
+2020-12-18T12:57:11.181+0700 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-18T12:57:11.182+0700 INFO Initializing Servlet 'dispatcherServlet'
+2020-12-18T12:57:11.184+0700 INFO Completed initialization in 1 ms
+2020-12-18T12:59:07.906+0700 INFO Starting AppApplication using Java 11.0.8 on DESKTOP-PDEE0N6 with PID 22320 (C:\Users\TRANTUANVU\Desktop\spring-app-agriculture\target\classes started by TRANTUANVU in C:\Users\TRANTUANVU\Desktop\spring-app-agriculture)
+2020-12-18T12:59:07.930+0700 INFO No active profile set, falling back to default profiles: default
+2020-12-18T12:59:09.128+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-18T12:59:09.244+0700 INFO Finished Spring Data repository scanning in 99 ms. Found 1 JPA repository interfaces.
+2020-12-18T12:59:09.945+0700 INFO Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:09.953+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.support.PluginRegistryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:09.969+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.OrderAwarePluginRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.001+0700 INFO Bean '_relProvider' of type [org.springframework.hateoas.server.core.DelegatingLinkRelationProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.026+0700 INFO Bean 'messageResolver' of type [org.springframework.hateoas.mediatype.MessageSourceResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.037+0700 INFO Bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration' of type [org.springframework.data.web.config.SpringDataJacksonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.048+0700 INFO Bean 'jacksonGeoModule' of type [org.springframework.data.geo.GeoModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.101+0700 INFO Bean 'org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.117+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.124+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.178+0700 INFO Bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' of type [org.springframework.boot.autoconfigure.jackson.JacksonProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.231+0700 INFO Bean 'standardJacksonObjectMapperBuilderCustomizer' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.278+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.302+0700 INFO Bean 'parameterNamesModule' of type [com.fasterxml.jackson.module.paramnames.ParameterNamesModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.307+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.396+0700 INFO Bean 'jsonComponentModule' of type [org.springframework.boot.jackson.JsonComponentModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.400+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.416+0700 INFO Bean 'spring.data.rest-org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.452+0700 INFO Bean 'springBootRepositoryRestConfigurer' of type [org.springframework.boot.autoconfigure.data.rest.SpringBootRepositoryRestConfigurer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.455+0700 INFO Bean 'configurerDelegate' of type [org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerDelegate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.469+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.580+0700 INFO Bean 'stringHttpMessageConverter' of type [org.springframework.http.converter.StringHttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.597+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.600+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.619+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.686+0700 INFO Bean 'jacksonObjectMapper' of type [com.fasterxml.jackson.databind.ObjectMapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.870+0700 INFO Bean 'mappingJackson2HttpMessageConverter' of type [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:10.939+0700 INFO Bean 'org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration' of type [org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T12:59:11.882+0700 INFO Tomcat initialized with port(s): 8090 (http)
+2020-12-18T12:59:11.915+0700 INFO Initializing ProtocolHandler ["http-nio-8090"]
+2020-12-18T12:59:11.916+0700 INFO Starting service [Tomcat]
+2020-12-18T12:59:11.917+0700 INFO Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-18T12:59:12.164+0700 INFO Initializing Spring embedded WebApplicationContext
+2020-12-18T12:59:12.165+0700 INFO Root WebApplicationContext: initialization completed in 4110 ms
+2020-12-18T12:59:12.685+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-18T12:59:12.787+0700 INFO HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-18T12:59:13.024+0700 INFO HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-18T12:59:13.228+0700 INFO HikariPool-1 - Starting...
+2020-12-18T12:59:13.778+0700 INFO HikariPool-1 - Start completed.
+2020-12-18T12:59:13.828+0700 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-18T12:59:15.675+0700 INFO HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-18T12:59:15.695+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-18T12:59:15.858+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-18T12:59:16.710+0700 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-18T12:59:16.958+0700 INFO Adding welcome page: class path resource [static/index.html]
+2020-12-18T12:59:18.183+0700 INFO Starting ProtocolHandler ["http-nio-8090"]
+2020-12-18T12:59:18.303+0700 INFO Tomcat started on port(s): 8090 (http) with context path ''
+2020-12-18T12:59:18.334+0700 INFO Started AppApplication in 11.206 seconds (JVM running for 13.104)
+2020-12-18T12:59:50.535+0700 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-18T12:59:50.536+0700 INFO Initializing Servlet 'dispatcherServlet'
+2020-12-18T12:59:50.538+0700 INFO Completed initialization in 2 ms
+2020-12-18T13:14:01.460+0700 INFO Starting AppApplication using Java 11.0.8 on DESKTOP-PDEE0N6 with PID 10108 (C:\Users\TRANTUANVU\Desktop\spring-app-agriculture\target\classes started by TRANTUANVU in C:\Users\TRANTUANVU\Desktop\spring-app-agriculture)
+2020-12-18T13:14:01.473+0700 INFO No active profile set, falling back to default profiles: default
+2020-12-18T13:14:02.325+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-18T13:14:02.396+0700 INFO Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interfaces.
+2020-12-18T13:14:02.708+0700 INFO Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.713+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.support.PluginRegistryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.728+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.OrderAwarePluginRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.732+0700 INFO Bean '_relProvider' of type [org.springframework.hateoas.server.core.DelegatingLinkRelationProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.748+0700 INFO Bean 'messageResolver' of type [org.springframework.hateoas.mediatype.MessageSourceResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.760+0700 INFO Bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration' of type [org.springframework.data.web.config.SpringDataJacksonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.769+0700 INFO Bean 'jacksonGeoModule' of type [org.springframework.data.geo.GeoModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.794+0700 INFO Bean 'org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.798+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.810+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.833+0700 INFO Bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' of type [org.springframework.boot.autoconfigure.jackson.JacksonProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.836+0700 INFO Bean 'standardJacksonObjectMapperBuilderCustomizer' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.839+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.841+0700 INFO Bean 'parameterNamesModule' of type [com.fasterxml.jackson.module.paramnames.ParameterNamesModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.843+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.851+0700 INFO Bean 'jsonComponentModule' of type [org.springframework.boot.jackson.JsonComponentModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.862+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.870+0700 INFO Bean 'spring.data.rest-org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.878+0700 INFO Bean 'springBootRepositoryRestConfigurer' of type [org.springframework.boot.autoconfigure.data.rest.SpringBootRepositoryRestConfigurer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.880+0700 INFO Bean 'configurerDelegate' of type [org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerDelegate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.888+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.903+0700 INFO Bean 'stringHttpMessageConverter' of type [org.springframework.http.converter.StringHttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.911+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.914+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.931+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.958+0700 INFO Bean 'jacksonObjectMapper' of type [com.fasterxml.jackson.databind.ObjectMapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.968+0700 INFO Bean 'mappingJackson2HttpMessageConverter' of type [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:02.977+0700 INFO Bean 'org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration' of type [org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:14:03.571+0700 INFO Tomcat initialized with port(s): 8090 (http)
+2020-12-18T13:14:03.582+0700 INFO Initializing ProtocolHandler ["http-nio-8090"]
+2020-12-18T13:14:03.587+0700 INFO Starting service [Tomcat]
+2020-12-18T13:14:03.588+0700 INFO Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-18T13:14:04.828+0700 INFO Initializing Spring embedded WebApplicationContext
+2020-12-18T13:14:04.829+0700 INFO Root WebApplicationContext: initialization completed in 3270 ms
+2020-12-18T13:14:05.024+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-18T13:14:05.070+0700 INFO HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-18T13:14:05.174+0700 INFO HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-18T13:14:05.307+0700 INFO HikariPool-1 - Starting...
+2020-12-18T13:14:05.842+0700 INFO HikariPool-1 - Start completed.
+2020-12-18T13:14:05.870+0700 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-18T13:14:06.515+0700 INFO HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-18T13:14:06.549+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-18T13:14:06.634+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-18T13:14:07.110+0700 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-18T13:14:07.305+0700 INFO Adding welcome page: class path resource [static/index.html]
+2020-12-18T13:14:07.634+0700 INFO Starting ProtocolHandler ["http-nio-8090"]
+2020-12-18T13:14:07.658+0700 INFO Tomcat started on port(s): 8090 (http) with context path ''
+2020-12-18T13:14:07.667+0700 INFO Started AppApplication in 6.643 seconds (JVM running for 7.611)
+2020-12-18T13:15:15.659+0700 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-18T13:15:15.660+0700 INFO Initializing Servlet 'dispatcherServlet'
+2020-12-18T13:15:15.663+0700 INFO Completed initialization in 3 ms
+2020-12-18T13:17:05.648+0700 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-18T13:17:05.649+0700 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-18T13:17:05.774+0700 INFO HikariPool-1 - Shutdown initiated...
+2020-12-18T13:17:05.818+0700 INFO HikariPool-1 - Shutdown completed.
+2020-12-18T13:17:36.386+0700 INFO Starting AppApplication using Java 11.0.8 on DESKTOP-PDEE0N6 with PID 1208 (C:\Users\TRANTUANVU\Desktop\spring-app-agriculture\target\classes started by TRANTUANVU in C:\Users\TRANTUANVU\Desktop\spring-app-agriculture)
+2020-12-18T13:17:36.408+0700 INFO No active profile set, falling back to default profiles: default
+2020-12-18T13:17:37.560+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-18T13:17:37.659+0700 INFO Finished Spring Data repository scanning in 82 ms. Found 1 JPA repository interfaces.
+2020-12-18T13:17:38.311+0700 INFO Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.318+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.support.PluginRegistryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.345+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.OrderAwarePluginRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.361+0700 INFO Bean '_relProvider' of type [org.springframework.hateoas.server.core.DelegatingLinkRelationProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.372+0700 INFO Bean 'messageResolver' of type [org.springframework.hateoas.mediatype.MessageSourceResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.396+0700 INFO Bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration' of type [org.springframework.data.web.config.SpringDataJacksonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.406+0700 INFO Bean 'jacksonGeoModule' of type [org.springframework.data.geo.GeoModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.443+0700 INFO Bean 'org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.502+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.508+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.576+0700 INFO Bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' of type [org.springframework.boot.autoconfigure.jackson.JacksonProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.591+0700 INFO Bean 'standardJacksonObjectMapperBuilderCustomizer' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.602+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.606+0700 INFO Bean 'parameterNamesModule' of type [com.fasterxml.jackson.module.paramnames.ParameterNamesModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.630+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.646+0700 INFO Bean 'jsonComponentModule' of type [org.springframework.boot.jackson.JsonComponentModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.674+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.706+0700 INFO Bean 'spring.data.rest-org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.724+0700 INFO Bean 'springBootRepositoryRestConfigurer' of type [org.springframework.boot.autoconfigure.data.rest.SpringBootRepositoryRestConfigurer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.727+0700 INFO Bean 'configurerDelegate' of type [org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerDelegate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.742+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.781+0700 INFO Bean 'stringHttpMessageConverter' of type [org.springframework.http.converter.StringHttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.795+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.798+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.807+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.840+0700 INFO Bean 'jacksonObjectMapper' of type [com.fasterxml.jackson.databind.ObjectMapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.851+0700 INFO Bean 'mappingJackson2HttpMessageConverter' of type [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:38.853+0700 INFO Bean 'org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration' of type [org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:17:39.762+0700 INFO Tomcat initialized with port(s): 8090 (http)
+2020-12-18T13:17:39.775+0700 INFO Initializing ProtocolHandler ["http-nio-8090"]
+2020-12-18T13:17:39.783+0700 INFO Starting service [Tomcat]
+2020-12-18T13:17:39.785+0700 INFO Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-18T13:17:39.931+0700 INFO Initializing Spring embedded WebApplicationContext
+2020-12-18T13:17:39.932+0700 INFO Root WebApplicationContext: initialization completed in 3426 ms
+2020-12-18T13:17:40.243+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-18T13:17:40.318+0700 INFO HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-18T13:17:40.520+0700 INFO HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-18T13:17:40.713+0700 INFO HikariPool-1 - Starting...
+2020-12-18T13:17:41.290+0700 INFO HikariPool-1 - Start completed.
+2020-12-18T13:17:41.315+0700 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-18T13:17:43.587+0700 INFO HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-18T13:17:43.716+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-18T13:17:43.795+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-18T13:17:44.374+0700 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-18T13:17:44.524+0700 INFO Adding welcome page: class path resource [static/index.html]
+2020-12-18T13:17:44.889+0700 INFO Starting ProtocolHandler ["http-nio-8090"]
+2020-12-18T13:17:44.912+0700 INFO Tomcat started on port(s): 8090 (http) with context path ''
+2020-12-18T13:17:44.922+0700 INFO Started AppApplication in 9.256 seconds (JVM running for 11.274)
+2020-12-18T13:22:30.790+0700 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-18T13:22:30.791+0700 INFO Initializing Servlet 'dispatcherServlet'
+2020-12-18T13:22:30.793+0700 INFO Completed initialization in 1 ms
+2020-12-18T13:23:02.195+0700 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-18T13:23:02.196+0700 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-18T13:23:02.210+0700 INFO HikariPool-1 - Shutdown initiated...
+2020-12-18T13:23:02.227+0700 INFO HikariPool-1 - Shutdown completed.
+2020-12-18T13:23:25.037+0700 INFO Starting AppApplication using Java 11.0.8 on DESKTOP-PDEE0N6 with PID 13420 (C:\Users\TRANTUANVU\Desktop\spring-app-agriculture\target\classes started by TRANTUANVU in C:\Users\TRANTUANVU\Desktop\spring-app-agriculture)
+2020-12-18T13:23:25.054+0700 INFO No active profile set, falling back to default profiles: default
+2020-12-18T13:23:26.392+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-18T13:23:26.495+0700 INFO Finished Spring Data repository scanning in 87 ms. Found 1 JPA repository interfaces.
+2020-12-18T13:23:27.261+0700 INFO Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.273+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.support.PluginRegistryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.288+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.OrderAwarePluginRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.309+0700 INFO Bean '_relProvider' of type [org.springframework.hateoas.server.core.DelegatingLinkRelationProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.327+0700 INFO Bean 'messageResolver' of type [org.springframework.hateoas.mediatype.MessageSourceResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.351+0700 INFO Bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration' of type [org.springframework.data.web.config.SpringDataJacksonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.391+0700 INFO Bean 'jacksonGeoModule' of type [org.springframework.data.geo.GeoModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.421+0700 INFO Bean 'org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.444+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.454+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.607+0700 INFO Bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' of type [org.springframework.boot.autoconfigure.jackson.JacksonProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.646+0700 INFO Bean 'standardJacksonObjectMapperBuilderCustomizer' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.677+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.684+0700 INFO Bean 'parameterNamesModule' of type [com.fasterxml.jackson.module.paramnames.ParameterNamesModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.720+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.735+0700 INFO Bean 'jsonComponentModule' of type [org.springframework.boot.jackson.JsonComponentModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.768+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.806+0700 INFO Bean 'spring.data.rest-org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.823+0700 INFO Bean 'springBootRepositoryRestConfigurer' of type [org.springframework.boot.autoconfigure.data.rest.SpringBootRepositoryRestConfigurer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.826+0700 INFO Bean 'configurerDelegate' of type [org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerDelegate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.843+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.885+0700 INFO Bean 'stringHttpMessageConverter' of type [org.springframework.http.converter.StringHttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.889+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.892+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.904+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.945+0700 INFO Bean 'jacksonObjectMapper' of type [com.fasterxml.jackson.databind.ObjectMapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.992+0700 INFO Bean 'mappingJackson2HttpMessageConverter' of type [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:27.995+0700 INFO Bean 'org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration' of type [org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:23:29.021+0700 INFO Tomcat initialized with port(s): 8095 (http)
+2020-12-18T13:23:29.045+0700 INFO Initializing ProtocolHandler ["http-nio-8095"]
+2020-12-18T13:23:29.048+0700 INFO Starting service [Tomcat]
+2020-12-18T13:23:29.049+0700 INFO Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-18T13:23:29.250+0700 INFO Initializing Spring embedded WebApplicationContext
+2020-12-18T13:23:29.252+0700 INFO Root WebApplicationContext: initialization completed in 4036 ms
+2020-12-18T13:23:29.731+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-18T13:23:29.833+0700 INFO HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-18T13:23:30.078+0700 INFO HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-18T13:23:30.311+0700 INFO HikariPool-1 - Starting...
+2020-12-18T13:23:31.480+0700 INFO HikariPool-1 - Start completed.
+2020-12-18T13:23:31.508+0700 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-18T13:23:33.010+0700 INFO HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-18T13:23:33.027+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-18T13:23:33.150+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-18T13:23:33.986+0700 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-18T13:23:34.252+0700 INFO Adding welcome page: class path resource [static/index.html]
+2020-12-18T13:23:34.895+0700 INFO Starting ProtocolHandler ["http-nio-8095"]
+2020-12-18T13:23:34.942+0700 INFO Tomcat started on port(s): 8095 (http) with context path ''
+2020-12-18T13:23:34.961+0700 INFO Started AppApplication in 10.659 seconds (JVM running for 12.543)
+2020-12-18T13:23:52.308+0700 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-18T13:23:52.308+0700 INFO Initializing Servlet 'dispatcherServlet'
+2020-12-18T13:23:52.310+0700 INFO Completed initialization in 1 ms
+2020-12-18T13:40:10.426+0700 INFO Starting AppApplication using Java 11.0.8 on DESKTOP-PDEE0N6 with PID 22116 (C:\Users\TRANTUANVU\Desktop\spring-app-agriculture\target\classes started by TRANTUANVU in C:\Users\TRANTUANVU\Desktop\spring-app-agriculture)
+2020-12-18T13:40:10.453+0700 INFO No active profile set, falling back to default profiles: default
+2020-12-18T13:40:11.979+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-18T13:40:12.066+0700 INFO Finished Spring Data repository scanning in 68 ms. Found 1 JPA repository interfaces.
+2020-12-18T13:40:12.653+0700 INFO Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:12.663+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.support.PluginRegistryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:12.691+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.OrderAwarePluginRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:12.727+0700 INFO Bean '_relProvider' of type [org.springframework.hateoas.server.core.DelegatingLinkRelationProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:12.753+0700 INFO Bean 'messageResolver' of type [org.springframework.hateoas.mediatype.MessageSourceResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:12.758+0700 INFO Bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration' of type [org.springframework.data.web.config.SpringDataJacksonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:12.781+0700 INFO Bean 'jacksonGeoModule' of type [org.springframework.data.geo.GeoModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:12.835+0700 INFO Bean 'org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:12.841+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:12.860+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:12.898+0700 INFO Bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' of type [org.springframework.boot.autoconfigure.jackson.JacksonProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:12.900+0700 INFO Bean 'standardJacksonObjectMapperBuilderCustomizer' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:12.906+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:12.930+0700 INFO Bean 'parameterNamesModule' of type [com.fasterxml.jackson.module.paramnames.ParameterNamesModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:12.932+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:12.950+0700 INFO Bean 'jsonComponentModule' of type [org.springframework.boot.jackson.JsonComponentModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:12.978+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:12.991+0700 INFO Bean 'spring.data.rest-org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:13.032+0700 INFO Bean 'springBootRepositoryRestConfigurer' of type [org.springframework.boot.autoconfigure.data.rest.SpringBootRepositoryRestConfigurer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:13.035+0700 INFO Bean 'configurerDelegate' of type [org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerDelegate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:13.046+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:13.068+0700 INFO Bean 'stringHttpMessageConverter' of type [org.springframework.http.converter.StringHttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:13.070+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:13.075+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:13.101+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:13.129+0700 INFO Bean 'jacksonObjectMapper' of type [com.fasterxml.jackson.databind.ObjectMapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:13.142+0700 INFO Bean 'mappingJackson2HttpMessageConverter' of type [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:13.160+0700 INFO Bean 'org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration' of type [org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T13:40:14.272+0700 INFO Tomcat initialized with port(s): 8095 (http)
+2020-12-18T13:40:14.299+0700 INFO Initializing ProtocolHandler ["http-nio-8095"]
+2020-12-18T13:40:14.315+0700 INFO Starting service [Tomcat]
+2020-12-18T13:40:14.317+0700 INFO Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-18T13:40:14.571+0700 INFO Initializing Spring embedded WebApplicationContext
+2020-12-18T13:40:14.572+0700 INFO Root WebApplicationContext: initialization completed in 3982 ms
+2020-12-18T13:40:15.050+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-18T13:40:15.150+0700 INFO HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-18T13:40:15.400+0700 INFO HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-18T13:40:15.604+0700 INFO HikariPool-1 - Starting...
+2020-12-18T13:40:16.148+0700 INFO HikariPool-1 - Start completed.
+2020-12-18T13:40:16.220+0700 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-18T13:40:17.784+0700 INFO HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-18T13:40:17.822+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-18T13:40:18.868+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-18T13:40:19.420+0700 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-18T13:40:19.743+0700 INFO Adding welcome page: class path resource [static/index.html]
+2020-12-18T13:40:20.492+0700 INFO Starting ProtocolHandler ["http-nio-8095"]
+2020-12-18T13:40:20.542+0700 INFO Tomcat started on port(s): 8095 (http) with context path ''
+2020-12-18T13:40:20.558+0700 INFO Started AppApplication in 10.769 seconds (JVM running for 12.323)
+2020-12-18T13:41:23.445+0700 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-18T13:41:23.446+0700 INFO Initializing Servlet 'dispatcherServlet'
+2020-12-18T13:41:23.448+0700 INFO Completed initialization in 2 ms
+2020-12-18T13:41:23.492+0700 WARN Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
+2020-12-18T17:00:54.178+0700 INFO Starting AppApplication using Java 11.0.8 on DESKTOP-PDEE0N6 with PID 9920 (C:\Users\TRANTUANVU\Desktop\spring-app-agriculture\target\classes started by TRANTUANVU in C:\Users\TRANTUANVU\Desktop\spring-app-agriculture)
+2020-12-18T17:00:54.211+0700 INFO No active profile set, falling back to default profiles: default
+2020-12-18T17:00:56.419+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-18T17:00:56.576+0700 INFO Finished Spring Data repository scanning in 142 ms. Found 1 JPA repository interfaces.
+2020-12-18T17:00:57.402+0700 INFO Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.408+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.support.PluginRegistryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.426+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.OrderAwarePluginRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.439+0700 INFO Bean '_relProvider' of type [org.springframework.hateoas.server.core.DelegatingLinkRelationProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.451+0700 INFO Bean 'messageResolver' of type [org.springframework.hateoas.mediatype.MessageSourceResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.454+0700 INFO Bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration' of type [org.springframework.data.web.config.SpringDataJacksonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.464+0700 INFO Bean 'jacksonGeoModule' of type [org.springframework.data.geo.GeoModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.478+0700 INFO Bean 'org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.485+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.488+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.510+0700 INFO Bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' of type [org.springframework.boot.autoconfigure.jackson.JacksonProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.515+0700 INFO Bean 'standardJacksonObjectMapperBuilderCustomizer' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.519+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.521+0700 INFO Bean 'parameterNamesModule' of type [com.fasterxml.jackson.module.paramnames.ParameterNamesModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.523+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.535+0700 INFO Bean 'jsonComponentModule' of type [org.springframework.boot.jackson.JsonComponentModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.538+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.548+0700 INFO Bean 'spring.data.rest-org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.550+0700 INFO Bean 'springBootRepositoryRestConfigurer' of type [org.springframework.boot.autoconfigure.data.rest.SpringBootRepositoryRestConfigurer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.552+0700 INFO Bean 'configurerDelegate' of type [org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerDelegate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.558+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.570+0700 INFO Bean 'stringHttpMessageConverter' of type [org.springframework.http.converter.StringHttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.572+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.575+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.585+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.602+0700 INFO Bean 'jacksonObjectMapper' of type [com.fasterxml.jackson.databind.ObjectMapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.714+0700 INFO Bean 'mappingJackson2HttpMessageConverter' of type [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:57.736+0700 INFO Bean 'org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration' of type [org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:00:59.302+0700 INFO Tomcat initialized with port(s): 8095 (http)
+2020-12-18T17:00:59.374+0700 INFO Initializing ProtocolHandler ["http-nio-8095"]
+2020-12-18T17:00:59.375+0700 INFO Starting service [Tomcat]
+2020-12-18T17:00:59.377+0700 INFO Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-18T17:00:59.678+0700 INFO Initializing Spring embedded WebApplicationContext
+2020-12-18T17:00:59.679+0700 INFO Root WebApplicationContext: initialization completed in 5353 ms
+2020-12-18T17:01:00.300+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-18T17:01:00.407+0700 INFO HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-18T17:01:00.691+0700 INFO HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-18T17:01:00.903+0700 INFO HikariPool-1 - Starting...
+2020-12-18T17:01:03.410+0700 INFO HikariPool-1 - Start completed.
+2020-12-18T17:01:03.538+0700 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-18T17:01:05.964+0700 INFO HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-18T17:01:05.979+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-18T17:01:06.453+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-18T17:01:06.944+0700 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-18T17:01:07.218+0700 INFO Adding welcome page: class path resource [static/index.html]
+2020-12-18T17:01:07.653+0700 INFO Starting ProtocolHandler ["http-nio-8095"]
+2020-12-18T17:01:07.760+0700 INFO Tomcat started on port(s): 8095 (http) with context path ''
+2020-12-18T17:01:07.776+0700 INFO Started AppApplication in 15.163 seconds (JVM running for 19.472)
+2020-12-18T17:01:32.407+0700 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-18T17:01:32.408+0700 INFO Initializing Servlet 'dispatcherServlet'
+2020-12-18T17:01:32.410+0700 INFO Completed initialization in 1 ms
+2020-12-18T17:01:56.879+0700 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-18T17:01:56.882+0700 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-18T17:01:56.886+0700 INFO HikariPool-1 - Shutdown initiated...
+2020-12-18T17:01:56.938+0700 INFO HikariPool-1 - Shutdown completed.
+2020-12-18T17:02:20.288+0700 INFO Starting AppApplication using Java 11.0.8 on DESKTOP-PDEE0N6 with PID 18316 (C:\Users\TRANTUANVU\Desktop\spring-app-agriculture\target\classes started by TRANTUANVU in C:\Users\TRANTUANVU\Desktop\spring-app-agriculture)
+2020-12-18T17:02:20.319+0700 INFO No active profile set, falling back to default profiles: default
+2020-12-18T17:02:22.352+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-18T17:02:22.589+0700 INFO Finished Spring Data repository scanning in 144 ms. Found 1 JPA repository interfaces.
+2020-12-18T17:02:23.689+0700 INFO Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:23.717+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.support.PluginRegistryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:23.762+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.OrderAwarePluginRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.100+0700 INFO Bean '_relProvider' of type [org.springframework.hateoas.server.core.DelegatingLinkRelationProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.175+0700 INFO Bean 'messageResolver' of type [org.springframework.hateoas.mediatype.MessageSourceResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.217+0700 INFO Bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration' of type [org.springframework.data.web.config.SpringDataJacksonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.237+0700 INFO Bean 'jacksonGeoModule' of type [org.springframework.data.geo.GeoModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.352+0700 INFO Bean 'org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.360+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.388+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.449+0700 INFO Bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' of type [org.springframework.boot.autoconfigure.jackson.JacksonProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.455+0700 INFO Bean 'standardJacksonObjectMapperBuilderCustomizer' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.483+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.506+0700 INFO Bean 'parameterNamesModule' of type [com.fasterxml.jackson.module.paramnames.ParameterNamesModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.552+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.595+0700 INFO Bean 'jsonComponentModule' of type [org.springframework.boot.jackson.JsonComponentModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.616+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.650+0700 INFO Bean 'spring.data.rest-org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.657+0700 INFO Bean 'springBootRepositoryRestConfigurer' of type [org.springframework.boot.autoconfigure.data.rest.SpringBootRepositoryRestConfigurer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.679+0700 INFO Bean 'configurerDelegate' of type [org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerDelegate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.716+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.744+0700 INFO Bean 'stringHttpMessageConverter' of type [org.springframework.http.converter.StringHttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.748+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.775+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.799+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.869+0700 INFO Bean 'jacksonObjectMapper' of type [com.fasterxml.jackson.databind.ObjectMapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.904+0700 INFO Bean 'mappingJackson2HttpMessageConverter' of type [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:24.913+0700 INFO Bean 'org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration' of type [org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:02:26.387+0700 INFO Tomcat initialized with port(s): 8095 (http)
+2020-12-18T17:02:26.407+0700 INFO Initializing ProtocolHandler ["http-nio-8095"]
+2020-12-18T17:02:26.408+0700 INFO Starting service [Tomcat]
+2020-12-18T17:02:26.410+0700 INFO Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-18T17:02:27.094+0700 INFO Initializing Spring embedded WebApplicationContext
+2020-12-18T17:02:27.095+0700 INFO Root WebApplicationContext: initialization completed in 6589 ms
+2020-12-18T17:02:28.016+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-18T17:02:29.726+0700 INFO HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-18T17:02:31.252+0700 INFO HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-18T17:02:31.486+0700 INFO HikariPool-1 - Starting...
+2020-12-18T17:02:32.469+0700 INFO HikariPool-1 - Start completed.
+2020-12-18T17:02:32.524+0700 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-18T17:02:38.863+0700 INFO HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-18T17:02:38.879+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-18T17:02:39.467+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-18T17:02:40.134+0700 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-18T17:02:41.831+0700 INFO Adding welcome page: class path resource [static/index.html]
+2020-12-18T17:02:42.652+0700 INFO Starting ProtocolHandler ["http-nio-8095"]
+2020-12-18T17:02:42.697+0700 INFO Tomcat started on port(s): 8095 (http) with context path ''
+2020-12-18T17:02:42.713+0700 INFO Started AppApplication in 23.697 seconds (JVM running for 26.453)
+2020-12-18T17:03:52.127+0700 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-18T17:03:52.128+0700 INFO Initializing Servlet 'dispatcherServlet'
+2020-12-18T17:03:52.132+0700 INFO Completed initialization in 3 ms
+2020-12-18T17:14:45.595+0700 INFO Starting AppApplication using Java 11.0.8 on DESKTOP-PDEE0N6 with PID 17008 (C:\Users\TRANTUANVU\Desktop\spring-app-agriculture\target\classes started by TRANTUANVU in C:\Users\TRANTUANVU\Desktop\spring-app-agriculture)
+2020-12-18T17:14:45.606+0700 INFO No active profile set, falling back to default profiles: default
+2020-12-18T17:14:46.357+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-18T17:14:46.416+0700 INFO Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interfaces.
+2020-12-18T17:14:46.780+0700 INFO Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:46.785+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.support.PluginRegistryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:46.801+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.OrderAwarePluginRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:46.817+0700 INFO Bean '_relProvider' of type [org.springframework.hateoas.server.core.DelegatingLinkRelationProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:46.836+0700 INFO Bean 'messageResolver' of type [org.springframework.hateoas.mediatype.MessageSourceResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:46.840+0700 INFO Bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration' of type [org.springframework.data.web.config.SpringDataJacksonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:46.853+0700 INFO Bean 'jacksonGeoModule' of type [org.springframework.data.geo.GeoModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:46.883+0700 INFO Bean 'org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:46.893+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:46.898+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:46.943+0700 INFO Bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' of type [org.springframework.boot.autoconfigure.jackson.JacksonProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:46.950+0700 INFO Bean 'standardJacksonObjectMapperBuilderCustomizer' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:46.960+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:46.967+0700 INFO Bean 'parameterNamesModule' of type [com.fasterxml.jackson.module.paramnames.ParameterNamesModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:46.977+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:46.994+0700 INFO Bean 'jsonComponentModule' of type [org.springframework.boot.jackson.JsonComponentModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:47.011+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:47.025+0700 INFO Bean 'spring.data.rest-org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:47.027+0700 INFO Bean 'springBootRepositoryRestConfigurer' of type [org.springframework.boot.autoconfigure.data.rest.SpringBootRepositoryRestConfigurer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:47.030+0700 INFO Bean 'configurerDelegate' of type [org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerDelegate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:47.048+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:47.067+0700 INFO Bean 'stringHttpMessageConverter' of type [org.springframework.http.converter.StringHttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:47.075+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:47.080+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:47.106+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:47.130+0700 INFO Bean 'jacksonObjectMapper' of type [com.fasterxml.jackson.databind.ObjectMapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:47.150+0700 INFO Bean 'mappingJackson2HttpMessageConverter' of type [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:47.157+0700 INFO Bean 'org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration' of type [org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:14:47.931+0700 INFO Tomcat initialized with port(s): 8095 (http)
+2020-12-18T17:14:47.944+0700 INFO Initializing ProtocolHandler ["http-nio-8095"]
+2020-12-18T17:14:47.945+0700 INFO Starting service [Tomcat]
+2020-12-18T17:14:47.946+0700 INFO Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-18T17:14:48.061+0700 INFO Initializing Spring embedded WebApplicationContext
+2020-12-18T17:14:48.062+0700 INFO Root WebApplicationContext: initialization completed in 2396 ms
+2020-12-18T17:14:48.274+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-18T17:14:48.322+0700 INFO HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-18T17:14:48.446+0700 INFO HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-18T17:14:48.574+0700 INFO HikariPool-1 - Starting...
+2020-12-18T17:14:49.018+0700 INFO HikariPool-1 - Start completed.
+2020-12-18T17:14:49.051+0700 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-18T17:14:50.338+0700 INFO HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-18T17:14:50.353+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-18T17:14:50.712+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-18T17:14:50.985+0700 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-18T17:14:51.114+0700 INFO Adding welcome page: class path resource [static/index.html]
+2020-12-18T17:14:51.463+0700 INFO Starting ProtocolHandler ["http-nio-8095"]
+2020-12-18T17:14:51.489+0700 INFO Tomcat started on port(s): 8095 (http) with context path ''
+2020-12-18T17:14:51.499+0700 INFO Started AppApplication in 6.353 seconds (JVM running for 8.053)
+2020-12-18T17:15:09.142+0700 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-18T17:15:09.144+0700 INFO Initializing Servlet 'dispatcherServlet'
+2020-12-18T17:15:09.145+0700 INFO Completed initialization in 1 ms
+2020-12-18T17:16:01.702+0700 INFO nullcount - usercontroller
+2020-12-18T17:16:14.658+0700 INFO nullcount - usercontroller
+2020-12-18T17:17:27.685+0700 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-18T17:17:27.704+0700 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-18T17:17:27.711+0700 INFO HikariPool-1 - Shutdown initiated...
+2020-12-18T17:17:27.730+0700 INFO HikariPool-1 - Shutdown completed.
+2020-12-18T17:17:53.782+0700 INFO Starting AppApplication using Java 11.0.8 on DESKTOP-PDEE0N6 with PID 4592 (C:\Users\TRANTUANVU\Desktop\spring-app-agriculture\target\classes started by TRANTUANVU in C:\Users\TRANTUANVU\Desktop\spring-app-agriculture)
+2020-12-18T17:17:53.794+0700 INFO No active profile set, falling back to default profiles: default
+2020-12-18T17:17:54.503+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-18T17:17:54.558+0700 INFO Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interfaces.
+2020-12-18T17:17:54.875+0700 INFO Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:54.882+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.support.PluginRegistryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:54.893+0700 INFO Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.OrderAwarePluginRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:54.897+0700 INFO Bean '_relProvider' of type [org.springframework.hateoas.server.core.DelegatingLinkRelationProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:54.905+0700 INFO Bean 'messageResolver' of type [org.springframework.hateoas.mediatype.MessageSourceResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:54.909+0700 INFO Bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration' of type [org.springframework.data.web.config.SpringDataJacksonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:54.914+0700 INFO Bean 'jacksonGeoModule' of type [org.springframework.data.geo.GeoModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:54.928+0700 INFO Bean 'org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:54.931+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:54.934+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:54.958+0700 INFO Bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' of type [org.springframework.boot.autoconfigure.jackson.JacksonProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:54.961+0700 INFO Bean 'standardJacksonObjectMapperBuilderCustomizer' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:54.964+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:54.967+0700 INFO Bean 'parameterNamesModule' of type [com.fasterxml.jackson.module.paramnames.ParameterNamesModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:54.974+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:54.981+0700 INFO Bean 'jsonComponentModule' of type [org.springframework.boot.jackson.JsonComponentModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:54.984+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:54.996+0700 INFO Bean 'spring.data.rest-org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:54.997+0700 INFO Bean 'springBootRepositoryRestConfigurer' of type [org.springframework.boot.autoconfigure.data.rest.SpringBootRepositoryRestConfigurer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:55.000+0700 INFO Bean 'configurerDelegate' of type [org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerDelegate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:55.007+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:55.016+0700 INFO Bean 'stringHttpMessageConverter' of type [org.springframework.http.converter.StringHttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:55.019+0700 INFO Bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:55.025+0700 INFO Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:55.032+0700 INFO Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:55.048+0700 INFO Bean 'jacksonObjectMapper' of type [com.fasterxml.jackson.databind.ObjectMapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:55.061+0700 INFO Bean 'mappingJackson2HttpMessageConverter' of type [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:55.063+0700 INFO Bean 'org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration' of type [org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-18T17:17:55.690+0700 INFO Tomcat initialized with port(s): 8095 (http)
+2020-12-18T17:17:55.702+0700 INFO Initializing ProtocolHandler ["http-nio-8095"]
+2020-12-18T17:17:55.703+0700 INFO Starting service [Tomcat]
+2020-12-18T17:17:55.704+0700 INFO Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-18T17:17:55.846+0700 INFO Initializing Spring embedded WebApplicationContext
+2020-12-18T17:17:55.847+0700 INFO Root WebApplicationContext: initialization completed in 1995 ms
+2020-12-18T17:17:56.061+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-18T17:17:56.107+0700 INFO HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-18T17:17:56.217+0700 INFO HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-18T17:17:56.347+0700 INFO HikariPool-1 - Starting...
+2020-12-18T17:17:56.652+0700 INFO HikariPool-1 - Start completed.
+2020-12-18T17:17:56.668+0700 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-18T17:17:57.535+0700 INFO HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-18T17:17:57.559+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-18T17:17:57.928+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-18T17:17:58.207+0700 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-18T17:17:58.337+0700 INFO Adding welcome page: class path resource [static/index.html]
+2020-12-18T17:17:58.673+0700 INFO Starting ProtocolHandler ["http-nio-8095"]
+2020-12-18T17:17:58.697+0700 INFO Tomcat started on port(s): 8095 (http) with context path ''
+2020-12-18T17:17:58.708+0700 INFO Started AppApplication in 5.728 seconds (JVM running for 6.751)
+2020-12-18T17:18:15.694+0700 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-18T17:18:15.695+0700 INFO Initializing Servlet 'dispatcherServlet'
+2020-12-18T17:18:15.698+0700 INFO Completed initialization in 3 ms
+2020-12-18T17:18:23.917+0700 INFO No value presentcount - usercontroller
+2020-12-18T17:18:32.247+0700 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-18T17:18:32.249+0700 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-18T17:18:32.257+0700 INFO HikariPool-1 - Shutdown initiated...
+2020-12-18T17:18:32.273+0700 INFO HikariPool-1 - Shutdown completed.

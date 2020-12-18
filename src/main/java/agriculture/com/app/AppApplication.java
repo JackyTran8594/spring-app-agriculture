@@ -12,12 +12,19 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScans;
 import org.springframework.stereotype.Component;
 
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
 @EnableAutoConfiguration
-// @EntityScan("agriculture.com.app.model")
-@ComponentScan("agriculture.com.app.repositories")
+// working
+// @ComponentScan("agriculture.com.app.repositories")
+// @ComponentScan("agriculture.com.app.controller")
+// @ComponentScan("agriculture.com.app.dto")
+// @ComponentScan("agriculture.com.app.model")
+// @ComponentScan("agriculture.com.app.service")
+// end
+@ComponentScan
 public class AppApplication {
 
 	private static final Logger LOGGER = LogManager.getLogger(AppApplication.class);

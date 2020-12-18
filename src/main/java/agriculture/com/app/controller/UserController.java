@@ -14,6 +14,7 @@ import org.apache.logging.log4j.core.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,13 +23,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @RestController
+@Component
 // @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/api")
+@RequestMapping(value = "/api")
 public class UserController {
 
 	@Autowired
@@ -36,7 +39,7 @@ public class UserController {
 
 	private static final Logger LOGGER = LogManager.getLogger(UserController.class);
 
-	@GetMapping("/users")
+	@RequestMapping(value = "/users", method = RequestMethod.GET)
 	@ResponseBody
 	public ResponseEntity allUsers() {
 		try {
@@ -50,7 +53,7 @@ public class UserController {
 
 	}
 
-	@PostMapping("/user")
+	@RequestMapping(value = "/user", method = RequestMethod.POST)
 	@ResponseBody
 	public ResponseEntity postUser(@RequestBody UserDTO user) {
 		try {
@@ -64,9 +67,10 @@ public class UserController {
 
 	}
 
-	@PutMapping("/user/{id}")
+	// @PutMapping("/user/{id}")
+	@RequestMapping(value = "/user/{id}", method = RequestMethod.PUT)
 	@ResponseBody
-	public ResponseEntity updateUser(@RequestBody UserDTO user, @PathVariable(value="id") String id) {
+	public ResponseEntity updateUser(@RequestBody UserDTO user, @PathVariable(value = "id") String id) {
 		try {
 			userService.updateUser(user, id);
 			return new ResponseEntity<>(HttpStatus.OK);
@@ -78,8 +82,8 @@ public class UserController {
 
 	}
 
-
-	@GetMapping("/users/count")
+	// @GetMapping("/users/count")
+	@RequestMapping(value = "/users/count", method = RequestMethod.GET)
 	@ResponseBody
 	public ResponseEntity<String> count() {
 		try {
@@ -95,9 +99,10 @@ public class UserController {
 		}
 	}
 
-	@GetMapping("/user/{id}")
+	// @GetMapping("/user/{id}")
+	@RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
 	@ResponseBody
-	public ResponseEntity getById(String id) {
+	public ResponseEntity getById(@PathVariable String id) {
 		try {
 			User user = userService.getById(id);
 			return new ResponseEntity<>(user, HttpStatus.OK);
@@ -111,7 +116,8 @@ public class UserController {
 		}
 	}
 
-	@DeleteMapping("/user/{id}")
+	// @DeleteMapping("/user/{id}")
+	@RequestMapping(value = "/user/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<String> delete(@PathVariable String id) {
 
 		try {
