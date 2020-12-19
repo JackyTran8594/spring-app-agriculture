@@ -6,6 +6,7 @@ import java.util.List;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -59,5 +60,9 @@ public class UserService {
     public void deleteById(Long userId) {
 
         userRepository.deleteById(userId);
+    }
+
+    private PasswordEncoder generatePassword() {
+
     }
 }
