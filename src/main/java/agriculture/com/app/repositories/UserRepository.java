@@ -12,7 +12,7 @@ import agriculture.com.app.model.User;
 
 @Repository
 @Component
-public interface UserRepository extends JpaRepository<User, Long>, UserRepositoryCustom, QuerydslPredicateExecutor<User> {
+public interface UserRepository extends JpaRepository<User, Long>, UserRepositoryCustom {
 
     // public List<User> findAll();
 
