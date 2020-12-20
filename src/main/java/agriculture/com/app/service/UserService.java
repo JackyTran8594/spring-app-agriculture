@@ -1,11 +1,13 @@
 package agriculture.com.app.service;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -40,15 +42,15 @@ public class UserService {
     }
 
     public void postUser(UserDTO userDTO) {
+        userDTO.password = encodedPassword(userDTO.password, 20);
         User user = oMapper.convertValue(userDTO, User.class);
         userRepository.save(user);
     }
 
     public void updateUser(UserDTO userDTO, String id) {
         Long uid = Long.parseLong(id);
-        var exist = userRepository.findById(uid).get();
-        exist = oMapper.convertValue(userDTO, User.class);
-        // user = oMapper.convertValue(userDTO, User.class);
+        var exist = userRepository.findById(uid).get();      
+        exist = oMapper.convertValue(userDTO, User.class);        
         userRepository.save(exist);
     }
 
@@ -62,7 +64,16 @@ public class UserService {
         userRepository.deleteById(userId);
     }
 
-    private PasswordEncoder generatePassword() {
-
+    private String encodedPassword(String password, int length) {
+        BCryptPasswordEncoder BCryptPasswordEncoder = new BCryptPasswordEncoder(length, new SecureRandom());
+        String encodedPassword = BCryptPasswordEncoder.encode(password);
+        return encodedPassword;
     }
+
+    // public User getUserByEmail(String email) {
+    //     var exist = userRepository.
+
+
+    // }
+
 }

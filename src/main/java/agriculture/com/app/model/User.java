@@ -16,6 +16,7 @@ public class User {
     private final String firstName;
     private final String lastName;
     private final String password;
+    private final String userName;
 
     private final String email;
 
@@ -24,6 +25,13 @@ public class User {
         this.lastName = "";
         this.email = "";
         this.password = "";
+        this.userName = "";
+
+    }
+
+    @Column(name = "userName")
+    public String getUserName() {
+        return userName;
     }
 
     @Column(name = "password")
@@ -41,11 +49,13 @@ public class User {
         return firstName;
     }
 
-    public User(String first_name, String last_name, String email, String password) {
+    public User(String first_name, String last_name, String email, String password, String userName) {
         this.firstName = first_name;
         this.lastName = last_name;
         this.email = email;
         this.password = password;
+        this.userName = userName;
+
     }
 
     @Column(name = "id")
