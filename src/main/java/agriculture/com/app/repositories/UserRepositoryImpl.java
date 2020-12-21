@@ -38,7 +38,7 @@ public class UserRepositoryImpl implements UserRepositoryCustom {
         final JPAQuery<User> query = new JPAQuery<>(entityManager);
         final QUser user = QUser.user;
         User userByEmail = query.from(user).where(user.email.eq(email), user.password.eq(password)).fetchOne();
-        
+
         return userByEmail;
     }
 
