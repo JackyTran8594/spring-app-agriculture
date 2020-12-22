@@ -18,11 +18,11 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
-import agriculture.com.app.filter.CustomFilter;
+import agriculture.com.app.filter.CustomSecurityFilter;
 import agriculture.com.app.provider.CustomAuthenticationProvider;
 
+@Configuration()
 @EnableWebSecurity
-@Configuration
 public class ApplicationSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
 
   @Autowired
@@ -30,16 +30,8 @@ public class ApplicationSecurityConfigurerAdapter extends WebSecurityConfigurerA
 
   @Override
   protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-      auth.authenticationProvider(authProvider);
+    auth.authenticationProvider(authProvider);
   }
-
-  // init configure
-  @Override
-  public void init(WebSecurity web) throws Exception {
-    // TODO Auto-generated method stub
-    web.ignoring().antMatchers("/resources/**");
-  }
-  // // end
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
@@ -48,29 +40,13 @@ public class ApplicationSecurityConfigurerAdapter extends WebSecurityConfigurerA
     http.authorizeRequests().antMatchers(HttpMethod.POST, "/login").permitAll()
         // .antMatchers("/register").permitAll().antMatchers("/welcome").hasAnyRole("Admin")
         // .antMatchers("/user").authenticated().and().formLogin().loginPage("/login").permitAll().and().logout()
-        .anyRequest().permitAll()
-        // .and().oauth2ResourceServer().jwt()
-        ;
-    // http.addFilterAfter(new CustomFilter(), BasicAuthenticationFilter.class);
+        .anyRequest().permitAll().and()
+    // .oauth2ResourceServer(oauth2 -> oauth2.jwt()) => error in this: not found
+    // class beartoken
+    ;
+    http.addFilterAfter(new CustomSecurityFilter(), BasicAuthenticationFilter.class);
 
     http.csrf().disable();
   }
 
-  // @Bean
-  //  public AuthenticationManager authenticationManagerBean() throws Exception {
-  //     return super.authenticationManagerBean();
-  //  }
-  // @Bean
-  // public FilterRegistrationBean corsFilter() {
-  //     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-  //     CorsConfiguration config = new CorsConfiguration();
-  //     config.setAllowCredentials(true);
-  //     config.addAllowedOrigin("*");
-  //     config.addAllowedHeader("*");
-  //     config.addAllowedMethod("*");
-  //     source.registerCorsConfiguration("/**", config);
-  //     FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
-  //     bean.setOrder(0);
-  //     return bean;
-  // }
 }

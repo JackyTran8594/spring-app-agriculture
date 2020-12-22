@@ -33,7 +33,7 @@ public class LoginController {
 				LOGGER.info("Email or password wrong" + "login - loigincontroller");
 				return new ResponseEntity<>("Email or password wrong", HttpStatus.BAD_REQUEST);
 			}
-			return new ResponseEntity<>("Successfully",HttpStatus.OK);
+			return new ResponseEntity<>("Successfully", HttpStatus.OK);
 		} catch (Exception e) {
 			// TODO: handle exception
 			LOGGER.info(e.getMessage() + "login - loigincontroller");
