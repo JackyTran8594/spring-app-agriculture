@@ -37,11 +37,12 @@ public class ApplicationSecurityConfigurerAdapter extends WebSecurityConfigurerA
   protected void configure(HttpSecurity http) throws Exception {
     // TODO Auto-generated method stub
 
-    http.authorizeRequests().antMatchers(HttpMethod.POST, "/login").permitAll()
+    http.authorizeRequests().antMatchers("/oauth/token").permitAll()
         // .antMatchers("/register").permitAll().antMatchers("/welcome").hasAnyRole("Admin")
         // .antMatchers("/user").authenticated().and().formLogin().loginPage("/login").permitAll().and().logout()
-        .anyRequest().permitAll().and()
-    // .oauth2ResourceServer(oauth2 -> oauth2.jwt()) => error in this: not found
+        .anyRequest().permitAll()
+    // .authenticated().and().oauth2ResourceServer(oauth2 -> oauth2.jwt())
+    // => error in this: not found
     // class beartoken
     ;
     http.addFilterAfter(new CustomSecurityFilter(), BasicAuthenticationFilter.class);

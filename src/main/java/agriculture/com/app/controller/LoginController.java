@@ -24,9 +24,9 @@ public class LoginController {
 
 	private static final Logger LOGGER = LogManager.getLogger(UserController.class);
 
-	@PostMapping("/login")
+	@PostMapping("/oauth/token")
 	@ResponseBody
-	public ResponseEntity<String> login(@RequestBody LogInDTO userInfo) {
+	public ResponseEntity<String> AuthenticationLogin(@RequestBody LogInDTO userInfo) {
 		try {
 			var exist = loginService.loadUserByEmail(userInfo.email, userInfo.password);
 			if (exist == null) {

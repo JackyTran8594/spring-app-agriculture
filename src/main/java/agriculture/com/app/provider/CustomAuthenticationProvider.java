@@ -20,7 +20,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         // TODO Auto-generated method stub
         final String name = authentication.getName();
         final String password = authentication.getCredentials().toString();
-
+        
         return null;
     }
 
