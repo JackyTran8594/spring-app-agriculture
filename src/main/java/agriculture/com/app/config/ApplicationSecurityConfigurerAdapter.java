@@ -40,8 +40,10 @@ public class ApplicationSecurityConfigurerAdapter extends WebSecurityConfigurerA
     http.authorizeRequests().antMatchers("/oauth/token").permitAll()
         // .antMatchers("/register").permitAll().antMatchers("/welcome").hasAnyRole("Admin")
         // .antMatchers("/user").authenticated().and().formLogin().loginPage("/login").permitAll().and().logout()
-        .anyRequest().permitAll()
-    // .authenticated().and().oauth2ResourceServer(oauth2 -> oauth2.jwt())
+        .anyRequest()
+    .authenticated().and()
+    .oauth2ResourceServer()
+    .jwt();
     // => error in this: not found
     // class beartoken
     ;

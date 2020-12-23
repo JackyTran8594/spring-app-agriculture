@@ -16,7 +16,7 @@ import agriculture.com.app.repositories.UserRepository;
 
 @Service
 @Component
-public class LoginService {
+public class OAuthCustomService {
 
     @Autowired
     private UserRepository userRepository;

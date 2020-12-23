@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import agriculture.com.app.dto.LogInDTO;
 import agriculture.com.app.model.User;
-import agriculture.com.app.service.LoginService;
+import agriculture.com.app.service.OAuthCustomService;
 
 @RestController
 @RequestMapping(name = "/api")
 public class LoginController {
 
 	@Autowired
-	private LoginService loginService;
+	private OAuthCustomService OAuthCustomService;
 
 	private static final Logger LOGGER = LogManager.getLogger(UserController.class);
 
@@ -28,7 +28,7 @@ public class LoginController {
 	@ResponseBody
 	public ResponseEntity<String> AuthenticationLogin(@RequestBody LogInDTO userInfo) {
 		try {
-			var exist = loginService.loadUserByEmail(userInfo.email, userInfo.password);
+			var exist = OAuthCustomService.loadUserByEmail(userInfo.email, userInfo.password);
 			if (exist == null) {
 				LOGGER.info("Email or password wrong" + "login - loigincontroller");
 				return new ResponseEntity<>("Email or password wrong", HttpStatus.BAD_REQUEST);
