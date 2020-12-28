@@ -17,22 +17,14 @@ import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenCo
 import agriculture.com.app.service.OAuthCustomService;
 
 @Configuration
+@EnableAuthorizationServer
 public class OAuthConfiguration extends AuthorizationServerConfigurerAdapter {
 
-    @Autowired
-    private final AuthenticationManager authenticationManager;
-
-    @Autowired
+   
     private final OAuthCustomService OAuthCustomService;
 
-    @Autowired
-    private final PasswordEncoder passwordEncoder;
-
-    public OAuthConfiguration(AuthenticationManager authenticationManager, OAuthCustomService OAuthCustomService,
-            PasswordEncoder passwordEncoder) {
-        this.authenticationManager = authenticationManager;
+    public OAuthConfiguration(OAuthCustomService OAuthCustomService) {
         this.OAuthCustomService = OAuthCustomService;
-        this.passwordEncoder = passwordEncoder;
     }
 
     private String client_id;
