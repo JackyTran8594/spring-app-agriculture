@@ -2,6 +2,7 @@ package agriculture.com.app.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -11,6 +12,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 
 import agriculture.com.app.service.OAuthCustomService;
 
@@ -43,11 +45,18 @@ public class OAuthConfiguration extends AuthorizationServerConfigurerAdapter {
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory().withClient(client_id).secret(client_secrect)
                 .accessTokenValiditySeconds(accessTokenValiditySeconds)
-                .refreshTokenValiditySeconds(refreshTokenValiditySeconds);
+                .refreshTokenValiditySeconds(refreshTokenValiditySeconds).resourceIds("api");
     }
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
+        endpoints.accessTokenConverter(accessTokenConverter()).userDetailsService(OAuthCustomService);
+    }
+
+    @Bean
+    JwtAccessTokenConverter accessTokenConverter() {
+        JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
+        return converter;
     }
 
 }

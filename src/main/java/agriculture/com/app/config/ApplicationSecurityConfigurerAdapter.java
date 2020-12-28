@@ -23,6 +23,7 @@ import agriculture.com.app.provider.CustomAuthenticationProvider;
 
 @Configuration()
 @EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true, proxyTargetClass = true)
 public class ApplicationSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
 
   @Autowired
