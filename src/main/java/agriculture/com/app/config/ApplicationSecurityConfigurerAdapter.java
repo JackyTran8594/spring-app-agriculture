@@ -38,10 +38,10 @@ public class ApplicationSecurityConfigurerAdapter extends WebSecurityConfigurerA
   protected void configure(HttpSecurity http) throws Exception {
     // TODO Auto-generated method stub
 
-    http.authorizeRequests().antMatchers("/oauth/token").permitAll()
-        // .antMatchers("/register").permitAll().antMatchers("/welcome").hasAnyRole("Admin")
-        // .antMatchers("/user").authenticated().and().formLogin().loginPage("/login").permitAll().and().logout()
-        .anyRequest().permitAll()
+    http.authorizeRequests().anyRequest().authenticated()
+    // antMatchers("/api/oauth/token/**").permitAll().and().authorizeRequests()
+    // .antMatchers("/api/register/**").permitAll().and().authorizeRequests().antMatchers("/api/user/**")
+    // .authenticated()
     // .authenticated().and()
     // .oauth2ResourceServer()
     // .jwt();

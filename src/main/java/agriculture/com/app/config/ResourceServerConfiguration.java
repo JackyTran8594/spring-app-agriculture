@@ -13,9 +13,4 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
         resources.resourceId("api");
     }
-
-    // @Override
-    // public void configure(HttpSecurity http) throws Exception {
-    // http.authorizeRequests().anyRequest().authenticated();
-    // }
 }
