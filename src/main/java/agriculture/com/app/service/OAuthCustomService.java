@@ -11,7 +11,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import agriculture.com.app.dto.LogInDTO;
 import agriculture.com.app.model.User;
 import agriculture.com.app.repositories.UserRepository;
 
@@ -22,20 +21,20 @@ public class OAuthCustomService implements UserDetailsService {
     @Autowired
     private UserRepository userRepository;
 
-    public User loadUserByUsername(String userName, String password) {
-        var exist = userRepository.findbyUserName(userName, password);
+    public UserDetails loadUserByUsername(String username, String password) {
+        var exist = userRepository.findbyUserName(username, password);
         if (exist == null) {
-            return null;
+            throw new UsernameNotFoundException(username);
         }
-        return exist;
+        return new MyUserPrincipal(exist);
     }
 
-    public User loadUserByEmail(String email, String password) {
+    public UserDetails loadUserByEmail(String email, String password) {
         var exist = userRepository.findbyEmail(email, password);
         if (exist == null) {
-            return null;
+            throw new UsernameNotFoundException(email);
         }
-        return exist;
+        return new MyUserPrincipal(exist);
     }
 
     @Override

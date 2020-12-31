@@ -1,6 +1,7 @@
 package agriculture.com.app.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,12 +19,11 @@ import agriculture.com.app.service.OAuthCustomService;
 
 @Configuration
 @EnableAuthorizationServer
-public class OAuthConfiguration extends AuthorizationServerConfigurerAdapter {
+public class OAuth2AuthorizationServer extends AuthorizationServerConfigurerAdapter {
 
-   
     private final OAuthCustomService OAuthCustomService;
 
-    public OAuthConfiguration(OAuthCustomService OAuthCustomService) {
+    public OAuth2AuthorizationServer(OAuthCustomService OAuthCustomService) {
         this.OAuthCustomService = OAuthCustomService;
     }
 
@@ -33,11 +33,18 @@ public class OAuthConfiguration extends AuthorizationServerConfigurerAdapter {
     private int accessTokenValiditySeconds;
     private int refreshTokenValiditySeconds;
 
+    // config client detail services for user
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory().withClient(client_id).secret(client_secrect)
                 .accessTokenValiditySeconds(accessTokenValiditySeconds)
                 .refreshTokenValiditySeconds(refreshTokenValiditySeconds).resourceIds("api");
+    }
+
+    @Override
+    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+        security.tokenKeyAccess("permitAll()").checkTokenAccess("isAuthenticated()")
+                .allowFormAuthenticationForClients();
     }
 
     @Override
