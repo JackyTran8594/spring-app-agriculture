@@ -39,7 +39,6 @@ public class UserController {
 
 	private static final Logger LOGGER = LogManager.getLogger(UserController.class);
 
-	// @RequestMapping(value = "/users", method = RequestMethod.GET)
 	@GetMapping("/users")
 	@ResponseBody
 	public ResponseEntity allUsers() {

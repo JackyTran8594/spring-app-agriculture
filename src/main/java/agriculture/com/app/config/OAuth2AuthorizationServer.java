@@ -13,7 +13,10 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.token.DefaultAccessTokenConverter;
+import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
+import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 import agriculture.com.app.service.OAuthCustomService;
 
@@ -27,24 +30,32 @@ public class OAuth2AuthorizationServer extends AuthorizationServerConfigurerAdap
         this.OAuthCustomService = OAuthCustomService;
     }
 
+    @Value("${app.agriculture.client.id}")
     private String client_id;
+    @Value("${app.agriculture.client.secrect}")
     private String client_secrect;
+    @Value("${app.agriculture.jwtTokenSigning}")
     private String jwtTokenSigning;
+    @Value("${app.agriculture.accessTokenValiditySeconds}")
     private int accessTokenValiditySeconds;
+    @Value("${app.agriculture.refreshTokenValiditySeconds}")
     private int refreshTokenValiditySeconds;
 
     // config client detail services for user
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory().withClient(client_id).secret(client_secrect)
+        // .authorizedGrantTypes("client_credentials", "password")
+                .authorities("ROLE_CLIENT","ROLE_TRUSTED_CLIENT")
+                .scopes("read","write","trust")
                 .accessTokenValiditySeconds(accessTokenValiditySeconds)
-                .refreshTokenValiditySeconds(refreshTokenValiditySeconds).resourceIds("api");
+                .refreshTokenValiditySeconds(refreshTokenValiditySeconds);
     }
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
         security.tokenKeyAccess("permitAll()").checkTokenAccess("isAuthenticated()")
-                .allowFormAuthenticationForClients();
+                ;
     }
 
     @Override
@@ -53,9 +64,14 @@ public class OAuth2AuthorizationServer extends AuthorizationServerConfigurerAdap
     }
 
     @Bean
-    JwtAccessTokenConverter accessTokenConverter() {
+    public JwtAccessTokenConverter accessTokenConverter() {
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
         return converter;
+    }
+
+    @Bean 
+    public TokenStore tokenStore(){
+        return new JwtTokenStore(accessTokenConverter());
     }
 
 }

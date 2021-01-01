@@ -24,7 +24,7 @@ public class LoginController {
 
 	private static final Logger LOGGER = LogManager.getLogger(UserController.class);
 
-	@PostMapping("/oauth/token")
+	@PostMapping("/login")
 	@ResponseBody
 	public ResponseEntity<String> AuthenticationLogin(@RequestBody LogInDTO userInfo) {
 		try {
