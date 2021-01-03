@@ -16,7 +16,7 @@ import agriculture.com.app.repositories.UserRepository;
 
 @Service
 @Component
-public class OAuthCustomService implements UserDetailsService{
+public class OAuthCustomService implements UserDetailsService {
 
     @Autowired
     private UserRepository userRepository;
