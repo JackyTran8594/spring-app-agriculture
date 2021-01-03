@@ -18,43 +18,43 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
 
+
+import agriculture.com.app.config.Jwt.AuthEntryPointJwt;
+import agriculture.com.app.config.Jwt.AuthTokenFilter;
 import agriculture.com.app.filter.CustomSecurityFilter;
-import agriculture.com.app.provider.CustomAuthenticationProvider;
-import agriculture.com.app.service.UserServiceImp;
+import agriculture.com.app.service.UserServiceDetailsImpl;
+
 
 @Configuration()
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true, proxyTargetClass = true)
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class ApplicationSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
 
+  @Autowired
+  private UserServiceDetailsImpl userServiceImp;
+
+  @Autowired
+  private AuthEntryPointJwt unauthorizedHandlder;
+
   // @Autowired
-  // private CustomAuthenticationProvider authProvider;
-
-  // @Override
-  // protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-  //   auth.authenticationProvider(authProvider);
+	// public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+	// 	auth.authenticationProvider(authenticationProvider());
   // }
-
-  @Autowired
-  private UserServiceImp userServiceImp;
-
-  @Autowired
-	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-		auth.authenticationProvider(authenticationProvider());
-	}
-
   
   @Bean
-   public DaoAuthenticationProvider authenticationProvider() {
-       DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
-       provider.setPasswordEncoder(bCryptPasswordEncoder());
-       provider.setUserDetailsService(userServiceImp);
-       return provider;
-   }
+  public AuthTokenFilter authenticationJwtTokenFilter() {
+      return new AuthTokenFilter();
+  }
+
+  
+  // @Bean
+  //  public DaoAuthenticationProvider authenticationProvider() {
+  //      DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
+  //      provider.setPasswordEncoder(bCryptPasswordEncoder());
+  //      provider.setUserDetailsService(userServiceImp);
+  //      return provider;
+  //  }
 
    @Bean
    public BCryptPasswordEncoder bCryptPasswordEncoder() {
@@ -73,16 +73,8 @@ public class ApplicationSecurityConfigurerAdapter extends WebSecurityConfigurerA
   protected void configure(HttpSecurity http) throws Exception {
     // TODO Auto-generated method stub
 
-    http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-    .and().authorizeRequests()
-    .antMatchers("/oauth/token").permitAll().anyRequest().authenticated()
-    // .antMatchers("/api/register/**").permitAll().and().authorizeRequests().antMatchers("/api/user/**")
-    // .authenticated()
-    // .authenticated().and()
-    // .oauth2ResourceServer()
-    // .jwt();
-    // => error in this: not found
-    // class beartoken
+   http.exceptionHandling().authenticationEntryPoint(unauthorizedHandlder);
+
     ;
 
     // http.oauth2Login();

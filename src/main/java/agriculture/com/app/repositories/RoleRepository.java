@@ -8,16 +8,13 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
+import agriculture.com.app.model.Role;
 import agriculture.com.app.model.User;
 
 @Repository
 @Component
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface RoleRepository extends JpaRepository<User, Long> {
 
-    
-    User findbyEmail(String email, String password);
-
-    User findbyUserName(String userName, String password);
-    
-    User findbyUserName(String userName);
+    Role findbyRoleNam(String name);
+   
 }

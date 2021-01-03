@@ -30,7 +30,7 @@ public class User {
     }
 
     @Column(name = "userName")
-    public String getUserName() {
+    public String getUsername() {
         return userName;
     }
 

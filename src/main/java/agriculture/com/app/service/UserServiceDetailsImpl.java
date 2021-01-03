@@ -12,11 +12,11 @@ import agriculture.com.app.repositories.UserRepository;
 
 @Service
 @Component
-public class UserServiceImp implements UserDetailsService {
+public class UserServiceDetailsImpl implements UserDetailsService {
 
     private final UserRepository userRepository;
 
-    public UserServiceImp(UserRepository userRepository) {
+    public UserServiceDetailsImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 

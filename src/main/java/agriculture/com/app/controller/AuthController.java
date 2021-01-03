@@ -16,15 +16,14 @@ import agriculture.com.app.model.User;
 import agriculture.com.app.service.OAuthCustomService;
 
 @RestController
-@RequestMapping(name = "/api")
-public class LoginController {
+public class AuthController {
 
 	@Autowired
 	private OAuthCustomService OAuthCustomService;
 
 	private static final Logger LOGGER = LogManager.getLogger(UserController.class);
 
-	@PostMapping("/login")
+	@PostMapping("/auth/token")
 	@ResponseBody
 	public ResponseEntity<String> AuthenticationLogin(@RequestBody LogInDTO userInfo) {
 		try {
