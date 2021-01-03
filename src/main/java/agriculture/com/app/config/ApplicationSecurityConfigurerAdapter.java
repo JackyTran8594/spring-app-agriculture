@@ -56,18 +56,17 @@ public class ApplicationSecurityConfigurerAdapter extends WebSecurityConfigurerA
   //      return provider;
   //  }
 
-   @Bean
-   public BCryptPasswordEncoder bCryptPasswordEncoder() {
-     return new BCryptPasswordEncoder();
-   }
 
-   @Bean
-   @Override
-   public AuthenticationManager authenticationManagerBean() throws Exception {
-       return super.authenticationManagerBean();
-   }
+  @Bean
+  public BCryptPasswordEncoder bCryptPasswordEncoder() {
+    return new BCryptPasswordEncoder();
+  }
 
-
+  @Bean
+  @Override
+  public AuthenticationManager authenticationManagerBean() throws Exception {
+    return super.authenticationManagerBean();
+  }
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
@@ -77,7 +76,6 @@ public class ApplicationSecurityConfigurerAdapter extends WebSecurityConfigurerA
 
     ;
 
-    // http.oauth2Login();
 
     http.addFilterAfter(new CustomSecurityFilter(), BasicAuthenticationFilter.class);
 
