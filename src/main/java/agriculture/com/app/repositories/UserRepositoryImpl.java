@@ -51,4 +51,10 @@ public class UserRepositoryImpl implements UserRepositoryCustom {
         return userByUserName;
     }
 
+    @Override
+    public User findbyUserName(String userName) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
 }

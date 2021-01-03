@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
@@ -44,9 +45,11 @@ public class OAuth2AuthorizationServer extends AuthorizationServerConfigurerAdap
     // config client detail services for user
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory().withClient(client_id).secret(client_secrect)
-        // .authorizedGrantTypes("client_credentials", "password")
-                .authorities("ROLE_CLIENT","ROLE_TRUSTED_CLIENT")
+        clients.inMemory().withClient("agriculturePlatform")
+        // .secret(passwordEncoder().encode("123456"))
+        .secret("secret")
+        .authorizedGrantTypes("password","authorization_code", "refresh_token").scopes("read","write")
+                .authorities("ROLE_CLIENT","ROLE_TRUSTED_CLIENT").autoApprove(true)
                 .scopes("read","write","trust")
                 .accessTokenValiditySeconds(accessTokenValiditySeconds)
                 .refreshTokenValiditySeconds(refreshTokenValiditySeconds);
@@ -73,5 +76,10 @@ public class OAuth2AuthorizationServer extends AuthorizationServerConfigurerAdap
     public TokenStore tokenStore(){
         return new JwtTokenStore(accessTokenConverter());
     }
+
+    @Bean
+	public PasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
 
 }

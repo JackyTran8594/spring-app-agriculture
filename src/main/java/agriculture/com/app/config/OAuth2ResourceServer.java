@@ -21,6 +21,6 @@ public class OAuth2ResourceServer extends ResourceServerConfigurerAdapter {
     public void configure(HttpSecurity http) throws Exception {
         // enable protection on all endpoints starting /api/ and all other endpoints can
         // be accessed freely
-        http.authorizeRequests().anyRequest().authenticated();
+        http.antMatcher("/**").authorizeRequests().anyRequest().authenticated();
     }
 }

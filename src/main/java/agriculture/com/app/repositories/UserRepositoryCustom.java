@@ -15,4 +15,7 @@ public interface UserRepositoryCustom {
     User findbyEmail(String email, String password);
 
     User findbyUserName(String userName, String password);
+    
+    User findbyUserName(String userName);
+
 }

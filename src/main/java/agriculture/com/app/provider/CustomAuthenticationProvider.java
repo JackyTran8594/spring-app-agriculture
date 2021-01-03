@@ -23,6 +23,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 
     @Autowired
     private OAuthCustomService oAuthCustomService;
+    
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
