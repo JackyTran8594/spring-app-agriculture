@@ -4,6 +4,7 @@ import java.util.Date;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.jwt.Jwt;
 import org.springframework.stereotype.Component;
@@ -13,23 +14,47 @@ import io.jsonwebtoken.*;
 
 @Component
 public class JwtUtils {
-    
+
     private static final Logger LOGGER = LogManager.getLogger(JwtUtils.class);
 
+    @Value("${app.agriculture.client.secrect}")
     private String jwtSecret;
 
+    @Value("${app.agriculture.jwtExpirationMs}")
     private int jwtExpiration;
 
-    public String generateJwtToken(Authentication authentication){
-        
-        UserDetailsImpl userPrincipal = (UserDetailsImpl)authentication.getPrincipal();
-        return Jwts.builder()
-        .setSubject((userPrincipal.getUsername()))
-                                .setIssuedAt(new Date())
-                                .setExpiration(new Date((new Date()).getTime()+ jwtExpiration))
-                                .signWith(SignatureAlgorithm.HS512, jwtSecret)
-                                .compact();
-                                
+    public String generateJwtToken(Authentication authentication) {
+
+        UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
+        return Jwts.builder().setSubject((userPrincipal.getUsername())).setIssuedAt(new Date())
+                .setExpiration(new Date((new Date()).getTime() + jwtExpiration))
+                .signWith(SignatureAlgorithm.HS512, jwtSecret).compact();
+
+    }
+
+    public boolean validateJwtToken(String authJwtToken) {
+        try {
+            Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(authJwtToken);
+            return true;
+
+        } catch (SignatureException e) {
+            // TODO: handle exception
+            LOGGER.error("Invalid JWT signature: {}", e.getMessage());
+        } catch (MalformedJwtException e) {
+            LOGGER.error("Invalid JWT token: {}", e.getMessage());
+        } catch (ExpiredJwtException e) {
+            LOGGER.error("JWT token is expired: {}", e.getMessage());
+        } catch (UnsupportedJwtException e) {
+            LOGGER.error("JWT token is unsupported: {}", e.getMessage());
+        } catch (IllegalArgumentException e) {
+            LOGGER.error("JWT claims string is empty: {}", e.getMessage());
+        }
+        return false;
+    }
+
+    public String getUserNameFromJwtToken(String jwtToken) {
+        String tokenParser = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(jwtToken).getBody().getSubject();
+        return tokenParser;
     }
 
 }

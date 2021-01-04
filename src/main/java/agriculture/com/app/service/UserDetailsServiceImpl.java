@@ -9,14 +9,13 @@ import org.springframework.stereotype.Service;
 import agriculture.com.app.model.User;
 import agriculture.com.app.repositories.UserRepository;
 
-
 @Service
 @Component
-public class UserServiceDetailsImpl implements UserDetailsService {
+public class UserDetailsServiceImpl implements UserDetailsService {
 
     private final UserRepository userRepository;
 
-    public UserServiceDetailsImpl(UserRepository userRepository) {
+    public UserDetailsServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
@@ -29,5 +28,5 @@ public class UserServiceDetailsImpl implements UserDetailsService {
         }
         return new MyUserPrincipal(exist);
     }
-    
+
 }
