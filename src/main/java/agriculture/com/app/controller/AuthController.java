@@ -8,7 +8,7 @@ import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-// import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,24 +16,22 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import agriculture.com.app.config.Jwt.JwtResponse;
+import agriculture.com.app.utils.JwtResponse;
 import agriculture.com.app.config.Jwt.JwtUtils;
 import agriculture.com.app.dto.LogInDTO;
-import agriculture.com.app.model.User;
+
 import agriculture.com.app.repositories.RoleRepository;
 import agriculture.com.app.repositories.UserRepository;
-import agriculture.com.app.service.OAuthCustomService;
+
 import agriculture.com.app.service.UserDetailsImpl;
 
 @RestController
 public class AuthController {
 
-	// @Autowired
-	// private OAuthCustomService OAuthCustomService;
 
 	private static final Logger LOGGER = LogManager.getLogger(UserController.class);
 

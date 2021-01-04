@@ -1,4 +1,4 @@
-package agriculture.com.app.config.Jwt;
+package agriculture.com.app.utils;
 
 public class JwtResponse {
     public String token;
