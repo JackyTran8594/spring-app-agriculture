@@ -7,31 +7,33 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.security.core.userdetails.UserDetails;
+
 @Entity
 @Table(name = "User")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private final String firstName;
-    private final String lastName;
+    private final String firstname;
+    private final String lastname;
     private final String password;
-    private final String userName;
+    private final String username;
 
     private final String email;
 
     public User() {
-        this.firstName = "";
-        this.lastName = "";
+        this.firstname = "";
+        this.lastname = "";
         this.email = "";
         this.password = "";
-        this.userName = "";
+        this.username = "";
 
     }
 
-    @Column(name = "userName")
+    @Column(name = "username")
     public String getUsername() {
-        return userName;
+        return username;
     }
 
     @Column(name = "password")
@@ -39,22 +41,22 @@ public class User {
         return password;
     }
 
-    @Column(name = "lastName")
+    @Column(name = "lastname")
     public String getLastName() {
-        return lastName;
+        return lastname;
     }
 
-    @Column(name = "firstName")
+    @Column(name = "firstname")
     public String getFirstName() {
-        return firstName;
+        return firstname;
     }
 
-    public User(String first_name, String last_name, String email, String password, String userName) {
-        this.firstName = first_name;
-        this.lastName = last_name;
+    public User(String firstname, String lastname, String email, String password, String username) {
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.email = email;
         this.password = password;
-        this.userName = userName;
+        this.username = username;
 
     }
 
@@ -70,7 +72,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", name=" + firstName + " " + lastName + ", email=" + email + '}';
+        return "User{" + "id=" + id + ", name=" + firstname + " " + lastname + ", email=" + email + '}';
     }
     // standard constructors / setters / getters / toString
 }

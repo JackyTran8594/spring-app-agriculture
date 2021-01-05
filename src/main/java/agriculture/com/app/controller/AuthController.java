@@ -32,7 +32,6 @@ import agriculture.com.app.service.UserDetailsImpl;
 @RestController
 public class AuthController {
 
-
 	private static final Logger LOGGER = LogManager.getLogger(UserController.class);
 
 	@Autowired
@@ -52,7 +51,7 @@ public class AuthController {
 	public ResponseEntity<?> AuthenticationLogin(@RequestBody LogInDTO logInDTO) {
 		try {
 			Authentication authentication = authenticationManager
-					.authenticate(new UsernamePasswordAuthenticationToken(logInDTO.userName, logInDTO.password));
+					.authenticate(new UsernamePasswordAuthenticationToken(logInDTO.username, logInDTO.password));
 			SecurityContextHolder.getContext().setAuthentication(authentication);
 			String jwt = jwtUtils.generateJwtToken(authentication);
 

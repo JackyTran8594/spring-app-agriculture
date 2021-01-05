@@ -21,21 +21,13 @@ import agriculture.com.app.service.UserService;
 @Component
 public class CustomAuthenticationProvider implements AuthenticationProvider {
 
-    @Autowired
-    private OAuthCustomService oAuthCustomService;
-    
+    // @Autowired
+    // private OAuthCustomService oAuthCustomService;
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         // TODO Auto-generated method stub
         return null;
-    }
-
-    public Authentication authenticate(Authentication authentication, LogInDTO logInDTO)
-            throws AuthenticationException {
-        // TODO Auto-generated method stub
-        UserDetails user = oAuthCustomService.loadUserByEmail(logInDTO.email, logInDTO.password);
-        return new UsernamePasswordAuthenticationToken(user.getUsername(), user.getAuthorities());
     }
 
     @Override

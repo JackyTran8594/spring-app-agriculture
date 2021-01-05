@@ -9,12 +9,11 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import agriculture.com.app.model.Role;
-import agriculture.com.app.model.User;
 
 @Repository
 @Component
-public interface RoleRepository extends JpaRepository<User, Long> {
+public interface RoleRepository extends JpaRepository<Role, Long> {
 
-    Role findbyRoleNam(String name);
-   
+    Role findByRole(String name);
+
 }

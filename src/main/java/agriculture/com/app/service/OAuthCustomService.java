@@ -21,26 +21,26 @@ public class OAuthCustomService implements UserDetailsService {
     @Autowired
     private UserRepository userRepository;
 
-    public UserDetails loadUserByUsername(String username, String password) {
-        var exist = userRepository.findbyUserName(username, password);
-        if (exist == null) {
-            throw new UsernameNotFoundException(username);
-        }
-        return new MyUserPrincipal(exist);
-    }
+    // public UserDetails loadUserByUsername(String username) {
+    // var exist = userRepository.findbyUserName(username);
+    // if (exist == null) {
+    // throw new UsernameNotFoundException(username);
+    // }
+    // return new MyUserPrincipal(exist);
+    // }
 
-    public UserDetails loadUserByEmail(String email, String password) {
-        var exist = userRepository.findbyEmail(email, password);
-        if (exist == null) {
-            throw new UsernameNotFoundException(email);
-        }
-        return new MyUserPrincipal(exist);
-    }
+    // public UserDetails loadUserByEmail(String email) {
+    // var exist = userRepository.findbyEmail(email);
+    // if (exist == null) {
+    // throw new UsernameNotFoundException(email);
+    // }
+    // return new MyUserPrincipal(exist);
+    // }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         // TODO Auto-generated method stub
-        var exist = userRepository.findbyUserName(username);
+        User exist = userRepository.findByUsername(username);
         if (exist == null) {
             throw new UsernameNotFoundException(username);
         }

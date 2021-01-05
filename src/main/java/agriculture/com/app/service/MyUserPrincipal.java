@@ -1,6 +1,7 @@
 package agriculture.com.app.service;
 
 import java.util.Collection;
+import java.util.Optional;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -11,8 +12,8 @@ public class MyUserPrincipal implements UserDetails {
 
     private User user;
 
-    public MyUserPrincipal(User exist) {
-        this.user = exist;
+    public MyUserPrincipal(User user) {
+        this.user = user;
     }
 
     @Override

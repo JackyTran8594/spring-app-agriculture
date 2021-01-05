@@ -24,7 +24,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         // TODO Auto-generated method stub
-        var exist = userRepository.findbyUserName(username);
+        User exist = userRepository.findByUsername(username);
         if (exist == null) {
             throw new UsernameNotFoundException(username);
         }

@@ -5,12 +5,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class LogInDTO {
 
-    public String userName;
+    public String username;
     public String email;
     public String password;
 
     public String getUsername() {
-        return userName;
+        return username;
     }
 
     public String getEmail() {

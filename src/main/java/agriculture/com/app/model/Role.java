@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import agriculture.com.app.utils.ERole;
 
 @Entity
-@Table(name="role")
+@Table(name = "role")
 public class Role {
 
     @Id
@@ -25,19 +25,19 @@ public class Role {
         this.id = id;
     }
 
-    @Column(name="role")
+    @Column(name = "role")
     public ERole getRole() {
         return role;
     }
 
-    @Column(name="note")
+    @Column(name = "note")
     public String getNote() {
         return note;
     }
 
-    @Column(name="id")
+    @Column(name = "id")
     public Integer getId() {
         return id;
     }
-    
+
 }

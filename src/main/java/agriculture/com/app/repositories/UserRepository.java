@@ -1,6 +1,7 @@
 package agriculture.com.app.repositories;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
@@ -14,10 +15,9 @@ import agriculture.com.app.model.User;
 @Component
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    
-    User findbyEmail(String email, String password);
+    // User findbyEmail(String email, String password);
 
-    User findbyUserName(String userName, String password);
-    
-    User findbyUserName(String userName);
+    // User findbyUserName(String userName, String password);
+
+    User findByUsername(String username);
 }
