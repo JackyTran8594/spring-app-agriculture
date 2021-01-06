@@ -1,13 +1,17 @@
 package agriculture.com.app.model;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+import javax.persistence.*;
+import javax.persistence.Access;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity
 @Table(name = "User")
@@ -22,13 +26,20 @@ public class User {
 
     private final String email;
 
+    private final String authorities;
+
     public User() {
         this.firstname = "";
         this.lastname = "";
         this.email = "";
         this.password = "";
         this.username = "";
+        this.authorities = "";
+    }
 
+    @Column(name = "authorities")
+    public String getAuthorities() {
+        return authorities;
     }
 
     @Column(name = "username")
@@ -51,13 +62,13 @@ public class User {
         return firstname;
     }
 
-    public User(String firstname, String lastname, String email, String password, String username) {
+    public User(String firstname, String lastname, String email, String password, String username, String authorities) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
         this.password = password;
         this.username = username;
-
+        this.authorities = authorities;
     }
 
     @Column(name = "id")

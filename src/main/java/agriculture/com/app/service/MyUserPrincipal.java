@@ -10,6 +10,10 @@ import agriculture.com.app.model.User;
 
 public class MyUserPrincipal implements UserDetails {
 
+    /**
+    *
+    */
+    private static final long serialVersionUID = -156382109433939994L;
     private User user;
 
     public MyUserPrincipal(User user) {
@@ -22,40 +26,48 @@ public class MyUserPrincipal implements UserDetails {
         return null;
     }
 
+    public Long getIdOfUserPrincipal() {
+        return this.user.getId();
+    }
+
+    public String getEmailOfUserPrincipal() {
+        return this.user.getEmail();
+    }
+
     @Override
     public String getPassword() {
         // TODO Auto-generated method stub
-        return null;
+        return this.user.getPassword();
     }
 
     @Override
     public String getUsername() {
         // TODO Auto-generated method stub
-        return null;
+        return this.user.getUsername();
     }
 
     @Override
     public boolean isAccountNonExpired() {
         // TODO Auto-generated method stub
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
         // TODO Auto-generated method stub
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
         // TODO Auto-generated method stub
-        return false;
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
         // TODO Auto-generated method stub
-        return false;
+        return true;
     }
 
 }

@@ -9,6 +9,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.jwt.Jwt;
 import org.springframework.stereotype.Component;
 
+import agriculture.com.app.model.User;
+import agriculture.com.app.service.MyUserPrincipal;
 import agriculture.com.app.service.UserDetailsImpl;
 import io.jsonwebtoken.*;
 
@@ -20,16 +22,30 @@ public class JwtUtils {
     @Value("${app.agriculture.client.secrect}")
     private String jwtSecret;
 
-    @Value("${app.agriculture.jwtExpirationMs}")
+    @Value("${app.agriculture.accessTokenValiditySeconds}")
     private int jwtExpiration;
+
+    @Value("${app.agriculture.refreshTokenValiditySeconds}")
+    private int jwtRefreshExpiration;
 
     public String generateJwtToken(Authentication authentication) {
 
-        UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
-        return Jwts.builder().setSubject((userPrincipal.getUsername())).setIssuedAt(new Date())
-                .setExpiration(new Date((new Date()).getTime() + jwtExpiration))
+        Object objectPrincipal = authentication.getPrincipal();
+        // UserDetailsImpl userPrincipal = (UserDetailsImpl) objectPrincipal;
+        MyUserPrincipal userPrincipal = (MyUserPrincipal) objectPrincipal;
+
+        return Jwts.builder().setSubject(userPrincipal.getUsername()).setIssuedAt(new Date(System.currentTimeMillis()))
+                .setExpiration(new Date(System.currentTimeMillis() + jwtExpiration))
                 .signWith(SignatureAlgorithm.HS512, jwtSecret).compact();
 
+    }
+
+    public String doGenerateRefreshJwtToken(Authentication authentication) {
+        Object objectPrincipal = authentication.getPrincipal();
+        MyUserPrincipal userPrincipal = (MyUserPrincipal) objectPrincipal;
+        return Jwts.builder().setSubject(userPrincipal.getUsername()).setIssuedAt(new Date(System.currentTimeMillis()))
+                .setExpiration(new Date(System.currentTimeMillis() + jwtRefreshExpiration))
+                .signWith(SignatureAlgorithm.HS512, jwtSecret).compact();
     }
 
     public boolean validateJwtToken(String authJwtToken) {

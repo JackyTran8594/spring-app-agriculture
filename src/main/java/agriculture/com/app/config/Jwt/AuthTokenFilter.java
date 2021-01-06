@@ -19,6 +19,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import agriculture.com.app.service.UserDetailsServiceImpl;
+import io.jsonwebtoken.ExpiredJwtException;
 
 public class AuthTokenFilter extends OncePerRequestFilter {
 
@@ -44,12 +45,31 @@ public class AuthTokenFilter extends OncePerRequestFilter {
                 authentication.setDetails(new WebAuthenticationDetailsSource());
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             }
-        } catch (Exception e) {
+        } catch (ExpiredJwtException e) {
             // TODO: handle exception
+            String isRefeshToken = request.getHeader("isRefreshToken");
+            String requestURL = request.getRequestURL().toString();
+            // allow for refresh token creation if following conditions are true
+            if (isRefeshToken != null && isRefeshToken.equals("true") && requestURL.contains("refreshToken")) {
+                allowForRefreshToken(e, request);
+            }
+            ;
+        } catch (Exception e) {
             LOGGER.error("Cannot set user authentication: {}", e.getMessage());
-
         }
         filterChain.doFilter(request, response);
+
+    }
+
+    private void allowForRefreshToken(ExpiredJwtException e, HttpServletRequest request) {
+        // creat authentication and setting that attributes are null value
+        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(null, null);
+
+        // After setting the Authentication in the context, specify
+        // that the current user is authenticated. So it passes the
+        // Spring Security Configurations successfully.
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+        request.setAttribute("claims", e.getClaims());
 
     }
 

@@ -21,17 +21,25 @@ public class UserDetailsImpl implements UserDetails {
 
     private String email;
 
-    @JsonIgnore
+    // @JsonIgnore
     private String password;
 
-    public UserDetailsImpl(Long id, String username, String email, String password
-    // ,Collection<? extends GrantedAuthority> authorities
-    ) {
+    private String authorities;
+
+    public UserDetailsImpl(Long id, String username, String email, String password, String authorities) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
-        // this.authorities = authorities;
+        this.authorities = authorities;
+    }
+
+    public String getAuthorities(String authorities) {
+        return this.authorities;
+    }
+
+    public void setAuthorities(String authorities) {
+        this.authorities = authorities;
     }
 
     public static UserDetailsImpl build(User user) {
@@ -39,9 +47,8 @@ public class UserDetailsImpl implements UserDetails {
         // .map(role -> new SimpleGrantedAuthority(role.getName().name()))
         // .collect(Collectors.toList());
 
-        return new UserDetailsImpl(user.getId(), user.getUsername(), user.getEmail(), user.getPassword()
-        // authorities
-        );
+        return new UserDetailsImpl(user.getId(), user.getUsername(), user.getEmail(), user.getPassword(),
+                user.getAuthorities());
     }
 
     @Override
@@ -73,37 +80,37 @@ public class UserDetailsImpl implements UserDetails {
     @Override
     public String getPassword() {
         // TODO Auto-generated method stub
-        return null;
+        return this.password;
     }
 
     @Override
     public String getUsername() {
         // TODO Auto-generated method stub
-        return null;
+        return this.username;
     }
 
     @Override
     public boolean isAccountNonExpired() {
         // TODO Auto-generated method stub
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
         // TODO Auto-generated method stub
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
         // TODO Auto-generated method stub
-        return false;
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
         // TODO Auto-generated method stub
-        return false;
+        return true;
     }
 
 }
