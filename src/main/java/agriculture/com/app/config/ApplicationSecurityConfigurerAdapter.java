@@ -14,14 +14,12 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
 import agriculture.com.app.config.Jwt.AuthEntryPointJwt;
 import agriculture.com.app.config.Jwt.AuthTokenFilter;
-import agriculture.com.app.filter.CustomSecurityFilter;
 import agriculture.com.app.service.UserDetailsServiceImpl;
 
 @Configuration()
