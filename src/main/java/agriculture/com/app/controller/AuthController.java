@@ -72,7 +72,8 @@ public class AuthController {
 
 	}
 
-	@GetMapping("/auth/refreshToken")
+	@PostMapping("/auth/refreshToken")
+	@ResponseBody
 	public ResponseEntity<?> refreshToken(@RequestBody LogInDTO logInDTO) {
 		try {
 			Authentication authentication = authenticationManager

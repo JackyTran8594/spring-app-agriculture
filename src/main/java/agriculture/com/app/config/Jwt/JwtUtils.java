@@ -33,9 +33,10 @@ public class JwtUtils {
         Object objectPrincipal = authentication.getPrincipal();
         // UserDetailsImpl userPrincipal = (UserDetailsImpl) objectPrincipal;
         MyUserPrincipal userPrincipal = (MyUserPrincipal) objectPrincipal;
-
+        System.out.println(System.currentTimeMillis());
+        System.out.println(System.currentTimeMillis() + jwtExpiration);
         return Jwts.builder().setSubject(userPrincipal.getUsername()).setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + jwtExpiration))
+                .setExpiration(new Date(System.currentTimeMillis() + jwtExpiration * 1000))
                 .signWith(SignatureAlgorithm.HS512, jwtSecret).compact();
 
     }
@@ -43,6 +44,8 @@ public class JwtUtils {
     public String doGenerateRefreshJwtToken(Authentication authentication) {
         Object objectPrincipal = authentication.getPrincipal();
         MyUserPrincipal userPrincipal = (MyUserPrincipal) objectPrincipal;
+        System.out.println(System.currentTimeMillis());
+        System.out.println(System.currentTimeMillis() + jwtRefreshExpiration * 1000);
         return Jwts.builder().setSubject(userPrincipal.getUsername()).setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + jwtRefreshExpiration))
                 .signWith(SignatureAlgorithm.HS512, jwtSecret).compact();

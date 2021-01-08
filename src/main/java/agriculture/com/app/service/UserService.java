@@ -8,7 +8,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -49,8 +48,8 @@ public class UserService {
 
     public void updateUser(UserDTO userDTO, String id) {
         Long uid = Long.parseLong(id);
-        var exist = userRepository.findById(uid).get();      
-        exist = oMapper.convertValue(userDTO, User.class);        
+        var exist = userRepository.findById(uid).get();
+        exist = oMapper.convertValue(userDTO, User.class);
         userRepository.save(exist);
     }
 
@@ -71,8 +70,7 @@ public class UserService {
     }
 
     // public User getUserByEmail(String email) {
-    //     var exist = userRepository.
-
+    // var exist = userRepository.
 
     // }
 
