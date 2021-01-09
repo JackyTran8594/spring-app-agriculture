@@ -1,9 +1,12 @@
 package agriculture.com.app.service;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import agriculture.com.app.model.User;
@@ -22,8 +25,16 @@ public class MyUserPrincipal implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        // TODO Auto-generated method stub
-        return null;
+        // TODO Auto-generated method 
+        List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
+        String role = this.user.getAuthorities();
+        authorities.add(new SimpleGrantedAuthority(role));
+        return authorities;
+    }
+
+
+    public String getAuthoritiesOfUserPrincipal() {
+        return this.user.getAuthorities();
     }
 
     public Long getIdOfUserPrincipal() {

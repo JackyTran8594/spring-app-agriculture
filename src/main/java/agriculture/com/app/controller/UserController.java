@@ -38,7 +38,7 @@ public class UserController {
 	private static final Logger LOGGER = LogManager.getLogger(UserController.class);
 
 	@GetMapping("/test")
-	// @PreAuthorize("hasRole('user')")
+	@PreAuthorize("hasRole('user')")
 	@ResponseBody
 	public ResponseEntity test() {
 		try {

@@ -55,7 +55,7 @@ public class RoleController {
 	}
 
 	@GetMapping("/roles")
-	// @PreAuthorize("hasRole('Role') or hasRole('moderator') or hasRole('admin')")
+	@PreAuthorize("hasRole('user') or hasRole('moderator') or hasRole('admin')")
 	@ResponseBody
 	public ResponseEntity allRoles() {
 		try {
@@ -70,7 +70,7 @@ public class RoleController {
 	}
 
 	@PostMapping("/role")
-	// @PreAuthorize("hasRole('admin')")
+	@PreAuthorize("hasRole('admin')")
 	@ResponseBody
 	public ResponseEntity postRole(@RequestBody RoleDTO Role) {
 		try {
@@ -85,7 +85,7 @@ public class RoleController {
 	}
 
 	@PutMapping("/role/{id}")
-	// @PreAuthorize("hasRole('admin')")
+	@PreAuthorize("hasRole('admin')")
 	@ResponseBody
 	public ResponseEntity updateRole(@RequestBody RoleDTO Role, @PathVariable(value = "id") String id) {
 		try {
@@ -100,7 +100,7 @@ public class RoleController {
 	}
 
 	@GetMapping("/roles/count")
-	// @PreAuthorize("hasRole('Role') or hasRole('moderator') or hasRole('admin')")
+	@PreAuthorize("hasRole('user') or hasRole('moderator') or hasRole('admin')")
 	@ResponseBody
 	public ResponseEntity<String> count() {
 		try {
@@ -116,7 +116,7 @@ public class RoleController {
 	}
 
 	@GetMapping("/role/{id}")
-	// @PreAuthorize("hasRole('Role') or hasRole('moderator') or hasRole('admin')")
+	@PreAuthorize("hasRole('user') or hasRole('moderator') or hasRole('admin')")
 	@ResponseBody
 	public ResponseEntity getById(@PathVariable String id) {
 		try {
