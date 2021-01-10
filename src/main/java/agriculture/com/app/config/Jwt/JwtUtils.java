@@ -28,7 +28,7 @@ public class JwtUtils {
     @Value("${app.agriculture.refreshTokenValiditySeconds}")
     private int jwtRefreshExpiration;
 
-    public String generateJwtToken(Authentication authentication) {
+    public String generateJwtToken(Authentication authentication) { 
 
         Object objectPrincipal = authentication.getPrincipal();
         // UserDetailsImpl userPrincipal = (UserDetailsImpl) objectPrincipal;
