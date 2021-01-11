@@ -38,7 +38,7 @@ public class UserController {
 	private static final Logger LOGGER = LogManager.getLogger(UserController.class);
 
 	@GetMapping("/test")
-	@PreAuthorize("hasRole('user')")
+	@PreAuthorize("hasRole('ROLE_USER')")
 	@ResponseBody
 	public ResponseEntity test() {
 		try {
@@ -53,7 +53,7 @@ public class UserController {
 	}
 
 	@GetMapping("/users")
-	@PreAuthorize("hasRole('user') or hasRole('moderator') or hasRole('admin')")
+	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity allUsers() {
 		try {
@@ -68,7 +68,7 @@ public class UserController {
 	}
 
 	@PostMapping("/user")
-	@PreAuthorize("hasRole('admin')")
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity postUser(@RequestBody UserDTO user) {
 		try {
@@ -83,7 +83,7 @@ public class UserController {
 	}
 
 	@PutMapping("/user/{id}")
-	@PreAuthorize("hasRole('admin')")
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity updateUser(@RequestBody UserDTO user, @PathVariable(value = "id") String id) {
 		try {
@@ -98,7 +98,7 @@ public class UserController {
 	}
 
 	@GetMapping("/users/count")
-	@PreAuthorize("hasRole('user') or hasRole('moderator') or hasRole('admin')")
+	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity<String> count() {
 		try {
@@ -114,7 +114,7 @@ public class UserController {
 	}
 
 	@GetMapping("/user/{id}")
-	@PreAuthorize("hasRole('user') or hasRole('moderator') or hasRole('admin')")
+	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity getById(@PathVariable String id) {
 		try {
@@ -131,7 +131,7 @@ public class UserController {
 	}
 
 	@DeleteMapping("/user/{id}")
-	@PreAuthorize("hasRole('admin')")
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public ResponseEntity<String> delete(@PathVariable String id) {
 
 		try {

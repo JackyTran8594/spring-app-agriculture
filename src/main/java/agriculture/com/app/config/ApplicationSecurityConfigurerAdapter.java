@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Configuration;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -24,7 +23,6 @@ import agriculture.com.app.service.UserDetailsServiceImpl;
 
 @Configuration()
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class ApplicationSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
 
   @Autowired
@@ -68,8 +66,8 @@ public class ApplicationSecurityConfigurerAdapter extends WebSecurityConfigurerA
     // create session policy => using stateless
     http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
-    http.authorizeRequests().antMatchers("/auth/token/**").permitAll().antMatchers("/api/user/**").permitAll()
-        .anyRequest().authenticated();
+    http.authorizeRequests().antMatchers("/auth/token").permitAll().antMatchers("/auth/refreshToken").permitAll()
+        .antMatchers("/api/user/**").permitAll().anyRequest().authenticated();
 
     // add filter for spring security
     http.addFilterAfter(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);

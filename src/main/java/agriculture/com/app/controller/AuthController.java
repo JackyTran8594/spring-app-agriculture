@@ -66,7 +66,7 @@ public class AuthController {
 					userPrincipal.getUsername(), userPrincipal.getIdOfUserPrincipal()), HttpStatus.OK);
 		} catch (Exception e) {
 			// TODO: handle exception
-			LOGGER.info(e.getMessage() + "\nlogin - loigincontroller");
+			LOGGER.info(e.getMessage() + "\nlogin - login controller");
 			return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
 		}
 

@@ -40,7 +40,7 @@ public class RoleController {
 	private static final Logger LOGGER = LogManager.getLogger(RoleController.class);
 
 	@GetMapping("/roletest")
-	// @PreAuthorize("hasRole('Role')")
+	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity test() {
 		try {
@@ -55,7 +55,7 @@ public class RoleController {
 	}
 
 	@GetMapping("/roles")
-	@PreAuthorize("hasRole('user') or hasRole('moderator') or hasRole('admin')")
+	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity allRoles() {
 		try {
@@ -70,7 +70,7 @@ public class RoleController {
 	}
 
 	@PostMapping("/role")
-	@PreAuthorize("hasRole('admin')")
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity postRole(@RequestBody RoleDTO Role) {
 		try {
@@ -85,7 +85,7 @@ public class RoleController {
 	}
 
 	@PutMapping("/role/{id}")
-	@PreAuthorize("hasRole('admin')")
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity updateRole(@RequestBody RoleDTO Role, @PathVariable(value = "id") String id) {
 		try {
@@ -100,7 +100,7 @@ public class RoleController {
 	}
 
 	@GetMapping("/roles/count")
-	@PreAuthorize("hasRole('user') or hasRole('moderator') or hasRole('admin')")
+	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity<String> count() {
 		try {
@@ -116,7 +116,7 @@ public class RoleController {
 	}
 
 	@GetMapping("/role/{id}")
-	@PreAuthorize("hasRole('user') or hasRole('moderator') or hasRole('admin')")
+	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity getById(@PathVariable String id) {
 		try {
@@ -133,7 +133,7 @@ public class RoleController {
 	}
 
 	@DeleteMapping("/role/{id}")
-	@PreAuthorize("hasRole('admin')")
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public ResponseEntity<String> delete(@PathVariable String id) {
 
 		try {
