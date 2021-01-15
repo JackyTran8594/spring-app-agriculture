@@ -12,23 +12,22 @@ import org.hibernate.annotations.DynamicUpdate;
 @Entity
 @DynamicUpdate
 @Table(name = "role")
-public class Role {
+public class Role extends BaseModel {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private String roleId;
     private String role;
     private String note;
 
     public Role() {
         this.role = "";
         this.note = "";
+        this.roleId = "";
     }
 
-    public Role(String role, String note, Integer id) {
+    public Role(String role, String note, String roleId) {
         this.role = role;
         this.note = note;
-        this.id = id;
+        this.roleId = roleId;
     }
 
     @Column(name = "role")
@@ -41,9 +40,9 @@ public class Role {
         return note;
     }
 
-    @Column(name = "id")
-    public Integer getId() {
-        return id;
+    @Column(name = "roleId")
+    public String getRoleId() {
+        return roleId;
     }
 
 }

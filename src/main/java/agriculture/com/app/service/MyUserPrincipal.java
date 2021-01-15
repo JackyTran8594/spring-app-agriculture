@@ -25,13 +25,12 @@ public class MyUserPrincipal implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        // TODO Auto-generated method 
+        // TODO Auto-generated method
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
         String role = this.user.getAuthorities();
         authorities.add(new SimpleGrantedAuthority(role));
         return authorities;
     }
-
 
     public String getAuthoritiesOfUserPrincipal() {
         return this.user.getAuthorities();

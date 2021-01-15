@@ -21,6 +21,27 @@
 	<dependencies>
 
 		<dependency>
+			<groupId>org.liquibase.ext</groupId>
+			<artifactId>liquibase-hibernate5</artifactId>
+			<version>4.2.2</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-maven-plugin</artifactId>
+			<version>4.2.2</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-core</artifactId>
+			<version>4.2.2</version>
+		</dependency>
+
+
+		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt</artifactId>
 			<version>0.9.1</version>
@@ -33,8 +54,6 @@
 			<version>2.1.3.RELEASE</version>
 		</dependency>
 
-
-			
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -129,6 +148,15 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
+			<plugin>
+				<groupId>org.liquibase</groupId>
+				<artifactId>liquibase-maven-plugin</artifactId>
+				<version>4.2.2</version>
+				<configuration>
+					<propertyFile>src/main/resources/liquibase.properties</propertyFile>
+					<diffChangeLogFile></diffChangeLogFile>
+				</configuration>
+			</plugin>
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
 				<executions>
