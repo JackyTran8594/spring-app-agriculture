@@ -10,10 +10,11 @@ import javax.persistence.Table;
 import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
-@DynamicUpdate
 @Table(name = "role")
-public class Role extends BaseModel {
-
+public class Role {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String roleId;
     private String role;
     private String note;
@@ -43,6 +44,11 @@ public class Role extends BaseModel {
     @Column(name = "roleId")
     public String getRoleId() {
         return roleId;
+    }
+
+    @Column(name = "id")
+    public Long getId() {
+    return id;
     }
 
 }
