@@ -10,16 +10,4 @@ public class LogInDTO {
     public String password;
     public boolean refreshToken;
 
-    public String getUsername() {
-        return username;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
 }

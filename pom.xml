@@ -154,8 +154,10 @@
 				<version>4.2.2</version>
 				<configuration>
 					<propertyFile>src/main/resources/liquibase.properties</propertyFile>
-					<driffChangeLogFile>${driffChangeLogFile}</driffChangeLogFile>
-					<changeLogFile>${changeLogFile}</changeLogFile>
+					<propertyFileWillOverride>true</propertyFileWillOverride>
+					<outputChangeLogFile>src/main/resources/db/changeLogFile/db.changelog-master.xml</outputChangeLogFile>
+					<changeLogFile>src/main/resources/db/changeLogFile/db.changelog-master.xml</changeLogFile>
+					<driffChangeLogFile>src/main/resources/db/changeLogFile/diff/db.${maven.build.timestamp}_changelog.xml</driffChangeLogFile>
 					<verbose>true</verbose>
 				</configuration>
 			</plugin>

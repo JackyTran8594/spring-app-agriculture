@@ -17,10 +17,10 @@ import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
 @Table(name = "User")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+public class User extends BaseModel {
+    // @Id
+    // @GeneratedValue(strategy = GenerationType.AUTO)
+    // private Long id;
     private final String firstname;
     private final String lastname;
     private final String password;
@@ -73,10 +73,10 @@ public class User {
         this.authorities = authorities;
     }
 
-    @Column(name = "id")
-    public Long getId() {
-    return id;
-    }
+    // @Column(name = "id")
+    // public Long getId() {
+    // return id;
+    // }
 
     @Column(name = "email")
     public String getEmail() {
