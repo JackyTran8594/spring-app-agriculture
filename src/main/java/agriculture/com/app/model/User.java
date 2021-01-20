@@ -1,26 +1,14 @@
 package agriculture.com.app.model;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
-import javax.persistence.*;
-import javax.persistence.Access;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-import org.hibernate.annotations.DynamicUpdate;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "User")
 public class User extends BaseModel {
-    // @Id
-    // @GeneratedValue(strategy = GenerationType.AUTO)
-    // private Long id;
+
     private final String firstname;
     private final String lastname;
     private final String password;
@@ -73,20 +61,9 @@ public class User extends BaseModel {
         this.authorities = authorities;
     }
 
-    // @Column(name = "id")
-    // public Long getId() {
-    // return id;
-    // }
-
     @Column(name = "email")
     public String getEmail() {
         return email;
     }
-
-    // @Override
-    // public String toString() {
-    // return "User{" + "id=" + id + ", name=" + firstname + " " + lastname + ",
-    // email=" + email + '}';
-    // }
     // standard constructors / setters / getters / toString
 }

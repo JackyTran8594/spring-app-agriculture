@@ -7,25 +7,26 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "post")
 public class Post extends BaseModel {
+
     private String postId;
     private String context;
-    private Integer like;
-    private Integer share;
+    private Long like;
+    private Long share;
     private String note;
 
     @Column(name = "context")
     public String getContext() {
-        return this.context;
+        return context;
     }
 
     @Column(name = "like")
-    public Integer getLike() {
-        return this.like;
+    public Long getLike() {
+        return like;
     }
 
     @Column(name = "share")
-    public Integer getShare() {
-        return this.share;
+    public Long getShare() {
+        return share;
     }
 
     public Post() {
@@ -33,17 +34,17 @@ public class Post extends BaseModel {
 
     @Column(name = "note")
     public String getNote() {
-        return this.note;
+        return note;
     }
 
     @Column(name = "author")
     public String getAuthor() {
-        return this.author;
+        return author;
     }
 
     private String author;
 
-    public Post(String postId, String context, Integer like, Integer share, String note, String author) {
+    public Post(String postId, String context, Long like, Long share, String note, String author) {
         this.postId = postId;
         this.context = context;
         this.like = like;
