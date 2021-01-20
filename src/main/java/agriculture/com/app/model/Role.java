@@ -16,9 +16,7 @@ public class Role extends BaseModel {
     private String note;
 
     public Role() {
-        this.role = "";
-        this.note = "";
-        this.roleId = "";
+       
     }
 
     public Role(String role, String note, String roleId) {

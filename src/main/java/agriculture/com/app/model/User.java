@@ -9,23 +9,16 @@ import javax.persistence.Table;
 @Table(name = "User")
 public class User extends BaseModel {
 
-    private final String firstname;
-    private final String lastname;
-    private final String password;
-    private final String username;
+    private String firstname;
+    private String lastname;
+    private String password;
+    private String username;
 
-    private final String email;
+    private String email;
 
-    private final String authorities;
+    private String authorities;
 
-    public User() {
-        this.firstname = "";
-        this.lastname = "";
-        this.email = "";
-        this.password = "";
-        this.username = "";
-        this.authorities = "";
-    }
+   
 
     @Column(name = "authorities")
     public String getAuthorities() {
@@ -52,6 +45,14 @@ public class User extends BaseModel {
         return firstname;
     }
 
+    @Column(name = "email")
+    public String getEmail() {
+        return email;
+    }
+
+    public User() {
+    }
+    
     public User(String firstname, String lastname, String email, String password, String username, String authorities) {
         this.firstname = firstname;
         this.lastname = lastname;
@@ -61,9 +62,6 @@ public class User extends BaseModel {
         this.authorities = authorities;
     }
 
-    @Column(name = "email")
-    public String getEmail() {
-        return email;
-    }
+  
     // standard constructors / setters / getters / toString
 }

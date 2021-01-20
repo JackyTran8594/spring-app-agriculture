@@ -18,10 +18,10 @@ public class AppApplication {
 	public static void main(String[] args) {
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
-		String encodedPassword = passwordEncoder.encode("jack");
-		System.out.println("--encodedPassword---");
-		System.out.println(encodedPassword);
-		System.out.println("--end---");
+		// String encodedPassword = passwordEncoder.encode("jack");
+		// System.out.println("--encodedPassword---");
+		// System.out.println(encodedPassword);
+		// System.out.println("--end---");
 
 		SpringApplication.run(AppApplication.class, args);
 	}
