@@ -18,6 +18,26 @@
 		<java.version>11</java.version>
 	</properties>
 
+	<!-- configure profiles for local, test environment -->
+	<profiles>
+		<profile>
+			<id>local</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<spring.profiles.active>local</spring.profiles.active>
+			</properties>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<spring.profiles.active>test</spring.profiles.active>
+			</properties>
+		</profile>
+	</profiles>
+	<!-- end -->
+
 	<dependencies>
 
 		<dependency>
@@ -145,6 +165,14 @@
 	</dependencies>
 
 	<build>
+
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -162,8 +190,8 @@
 					<propertyFileWillOverride>true</propertyFileWillOverride>
 					<outputChangeLogFile>src/main/resources/db/changeLogFile/db.changelog-master.xml</outputChangeLogFile>
 					<changeLogFile>src/main/resources/db/changeLogFile/db.changelog-master.xml</changeLogFile>
-					<!-- <driffChangeLogFile>src/main/resources/db/changeLogFile/diff/db.${maven.build.timestamp}_changelog.xml</driffChangeLogFile> -->
-					<driffChangeLogFile>src/main/resources/db/changeLogFile/diff/db.changelog.xml</driffChangeLogFile>
+					<driffChangeLogFile>src/main/resources/db/changeLogFile/diff/db.${maven.build.timestamp}_changelog.xml</driffChangeLogFile>
+					<!-- <driffChangeLogFile>src/main/resources/db/changeLogFile/diff/db.changelog.xml</driffChangeLogFile> -->
 					<verbose>true</verbose>
 				</configuration>
 			</plugin>
@@ -205,8 +233,5 @@
 				</executions>
 			</plugin>
 		</plugins>
-
-
 	</build>
-
 </project>
