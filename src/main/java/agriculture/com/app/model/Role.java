@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "role")
@@ -16,7 +17,7 @@ public class Role extends BaseModel {
     private String note;
 
     public Role() {
-       
+
     }
 
     public Role(String role, String note, String roleId) {
@@ -26,18 +27,21 @@ public class Role extends BaseModel {
     }
 
     @Column(name = "role")
+    @Size(max = 50)
     public String getRole() {
-        return role;
+        return this.role;
     }
 
     @Column(name = "note")
+    @Size(max = 500)
     public String getNote() {
-        return note;
+        return this.note;
     }
 
     @Column(name = "roleId")
+    @Size(min = 10, max = 30)
     public String getRoleId() {
-        return roleId;
+        return this.roleId;
     }
 
 }
