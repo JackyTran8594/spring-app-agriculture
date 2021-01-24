@@ -39,12 +39,12 @@ public class CategoryService {
         return item;
     }
 
-    public void postRole(CategoryDTO categoryDTO) {
+    public void post(CategoryDTO categoryDTO) {
         Category item = oMapper.convertValue(categoryDTO, Category.class);
         repository.save(item);
     }
 
-    public void updateRole(CategoryDTO categoryDTO, String id) {
+    public void update(CategoryDTO categoryDTO, String id) {
         Long uid = Long.parseLong(id);
         var exist = repository.findById(uid).get();
         exist = oMapper.convertValue(categoryDTO, Category.class);

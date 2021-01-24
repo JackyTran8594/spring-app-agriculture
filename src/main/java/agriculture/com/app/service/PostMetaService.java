@@ -37,12 +37,12 @@ public class PostMetaService {
         return item;
     }
 
-    public void postRole(PostMetaDTO postMetaDTO) {
+    public void post(PostMetaDTO postMetaDTO) {
         PostMeta item = oMapper.convertValue(postMetaDTO, PostMeta.class);
         repository.save(item);
     }
 
-    public void updateRole(PostMetaDTO postMetaDTO, String id) {
+    public void update(PostMetaDTO postMetaDTO, String id) {
         Long uid = Long.parseLong(id);
         var exist = repository.findById(uid).get();
         exist = oMapper.convertValue(postMetaDTO, PostMeta.class);

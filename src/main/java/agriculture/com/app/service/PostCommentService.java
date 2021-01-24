@@ -38,12 +38,12 @@ public class PostCommentService {
         return comment;
     }
 
-    public void postRole(PostCommentDTO postCommentDTO) {
+    public void post(PostCommentDTO postCommentDTO) {
         PostComment item = oMapper.convertValue(postCommentDTO, PostComment.class);
         repository.save(item);
     }
 
-    public void updateRole(PostCommentDTO postCommentDTO, String id) {
+    public void update(PostCommentDTO postCommentDTO, String id) {
         Long uid = Long.parseLong(id);
         var exist = repository.findById(uid).get();
         exist = oMapper.convertValue(postCommentDTO, PostComment.class);

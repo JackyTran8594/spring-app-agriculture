@@ -37,12 +37,12 @@ public class TagService {
         return item;
     }
 
-    public void postRole(TagDTO tagDTO) {
+    public void post(TagDTO tagDTO) {
         Tag item = oMapper.convertValue(tagDTO, Tag.class);
         repository.save(item);
     }
 
-    public void updateRole(TagDTO tagDTO, String id) {
+    public void update(TagDTO tagDTO, String id) {
         Long uid = Long.parseLong(id);
         var exist = repository.findById(uid).get();
         exist = oMapper.convertValue(tagDTO, Tag.class);
