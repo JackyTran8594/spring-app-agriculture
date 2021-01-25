@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -67,7 +66,10 @@ public class ApplicationSecurityConfigurerAdapter extends WebSecurityConfigurerA
     http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
     http.authorizeRequests().antMatchers("/auth/token").permitAll().antMatchers("/auth/refreshToken").permitAll()
-        .antMatchers("/api/user/**").permitAll().anyRequest().authenticated();
+        .antMatchers("/api/user/**").permitAll()
+        // access index of angular app in resources static
+        .antMatchers("/*").permitAll().anyRequest().authenticated();
+    ;
 
     // add filter for spring security
     http.addFilterAfter(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);

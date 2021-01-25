@@ -10,7 +10,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication()
 @EnableAutoConfiguration()
-
 public class AppApplication {
 
 	private static final Logger LOGGER = LogManager.getLogger(AppApplication.class);

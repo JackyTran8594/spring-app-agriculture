@@ -1,6 +1,7 @@
 package agriculture.com.app.config;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.access.PermissionEvaluator;
 import org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler;
 import org.springframework.security.access.expression.method.MethodSecurityExpressionHandler;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -15,7 +16,7 @@ public class CustomMethodSecurityConfig extends GlobalMethodSecurityConfiguratio
     // DefaultMethodSecurityExpressionHandler defaultMethodSecurityExpressionHandler
     // = new DefaultMethodSecurityExpressionHandler();
     // defaultMethodSecurityExpressionHandler.setPermissionEvaluator(new
-    // CustomPermissionEvaluator());
+    // PermissionEvaluator());
     // return defaultMethodSecurityExpressionHandler;
     // }
 }
