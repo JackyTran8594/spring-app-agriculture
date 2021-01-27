@@ -14,7 +14,7 @@ import { NbMenuModule, NbSidebarModule, NbThemeModule } from '@nebular/theme';
     BrowserModule,
     AppRoutingModule,   
     NbMenuModule.forRoot(),
-    NbThemeModule.forRoot()
+    NbThemeModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
