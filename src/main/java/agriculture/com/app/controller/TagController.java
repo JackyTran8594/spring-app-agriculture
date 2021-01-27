@@ -49,7 +49,7 @@ public class TagController {
 
 	}
 
-	@PostMapping("/tag")
+	@PostMapping("/postTag")
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity postTag(@RequestBody TagDTO data) {
@@ -64,7 +64,7 @@ public class TagController {
 
 	}
 
-	@PutMapping("/tag/{id}")
+	@PutMapping("/updateTag/{id}")
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity updateTag(@RequestBody TagDTO data, @PathVariable(value = "id") String id) {
@@ -95,7 +95,7 @@ public class TagController {
 		}
 	}
 
-	@GetMapping("/tag/{id}")
+	@GetMapping("/getById/{id}")
 	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity getById(@PathVariable String id) {
@@ -112,7 +112,7 @@ public class TagController {
 		}
 	}
 
-	@DeleteMapping("/tag/{id}")
+	@DeleteMapping("/delete/{id}")
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public ResponseEntity<String> delete(@PathVariable String id) {
 
