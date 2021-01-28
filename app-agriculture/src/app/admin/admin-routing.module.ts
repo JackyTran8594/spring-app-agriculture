@@ -3,7 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './admin.component';
 
 const routes: Routes = [
-  { path: '', component: AdminComponent, pathMatch: 'full' }
+  // { path: '', component: AdminComponent, pathMatch: 'full' },
+  {path:'admin/post', loadChildren: () => import('./post/post.module').then(m=>m.PostModule)}
+ 
 ];
 
 @NgModule({
