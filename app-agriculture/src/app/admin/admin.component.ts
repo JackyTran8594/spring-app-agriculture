@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NbMenuItem, NbSidebarService } from '@nebular/theme';
+import { ADMIN_MENU  } from './admin-menu';
 
 @Component({
   selector: 'app-admin',
@@ -16,19 +17,7 @@ export class AdminComponent implements OnInit {
     return false;
   }
 
-  items: NbMenuItem[] = [
-    {
-      title: 'Home',
-      icon: 'home-outline',
-      link: '/home',
-      home: true
-    },
-    {
-      title: 'Users',
-      icon: 'people-outline',
-      link: '/users'
-    }
-  ];
+  menu = ADMIN_MENU;
 
   ngOnInit(): void {
   }

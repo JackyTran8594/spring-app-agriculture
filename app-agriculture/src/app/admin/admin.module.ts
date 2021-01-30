@@ -9,6 +9,7 @@ import { PostModule } from './post/post.module';
 
 
 
+
 @NgModule({
   declarations: [AdminComponent],
   imports: [
@@ -19,7 +20,7 @@ import { PostModule } from './post/post.module';
     NbMenuModule,
     NbSidebarModule,
     NbEvaIconsModule,
-    PostModule
+    PostModule,
   ],
   providers: [NbThemeService, NbSidebarService]
 })
