@@ -5,6 +5,7 @@ import { CreateComponent } from './create/create.component';
 import { DetailComponent } from './detail/detail.component';
 import { UpdateComponent } from './update/update.component';
 import { NbAccordionModule, NbButtonModule, NbCardModule, NbListModule, NbRouteTabsetModule, NbStepperModule, NbTabsetModule, NbUserModule } from '@nebular/theme';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 
 
@@ -22,7 +23,7 @@ import { NbAccordionModule, NbButtonModule, NbCardModule, NbListModule, NbRouteT
     NbListModule,
     NbAccordionModule,
     NbUserModule,
-
+    Ng2SmartTableModule
   ]
 })
 export class PostModule { }
