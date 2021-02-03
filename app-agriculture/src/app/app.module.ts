@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { NbMenuModule, NbSidebarModule, NbThemeModule } from '@nebular/theme';
+import { NbIconModule, NbMenuModule, NbSidebarModule, NbThemeModule } from '@nebular/theme';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { NbMenuModule, NbSidebarModule, NbThemeModule } from '@nebular/theme';
     BrowserModule,
     AppRoutingModule,   
     NbMenuModule.forRoot(),
-    NbThemeModule.forRoot(),
+    NbThemeModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
