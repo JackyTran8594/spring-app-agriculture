@@ -60,12 +60,12 @@ export class PostComponent {
       // this.source.load();
   }
 
-  onDeleteConfirm(event) :void {
-    if(window.confirm('Are you sure you want to delete?'))
-    {
-      event.confirm.resolve();
-    } else {
-      event.confirm.reject();
-    }
-  }
+  // onDeleteConfirm(event) :void {
+  //   if(window.confirm('Are you sure you want to delete?'))
+  //   {
+  //     event.confirm.resolve();
+  //   } else {
+  //     event.confirm.reject();
+  //   }
+  // }
 }
