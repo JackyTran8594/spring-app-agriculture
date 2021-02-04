@@ -10,6 +10,11 @@ export class PostComponent {
 
 
   settings = {
+    actions: {
+      add: false,
+      edit: false,
+      delete: true,
+    },
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
