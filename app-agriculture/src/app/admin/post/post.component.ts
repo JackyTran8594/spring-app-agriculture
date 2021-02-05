@@ -14,6 +14,7 @@ export class PostComponent {
       add: false,
       edit: false,
       delete: true,
+      position: 'right',
     },
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
