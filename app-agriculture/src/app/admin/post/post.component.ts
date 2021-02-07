@@ -10,6 +10,8 @@ export class PostComponent {
 
 
   settings = {
+    mode: 'external',
+    hideSubHeader: true,
     actions: {
       add: false,
       edit: false,
@@ -34,6 +36,7 @@ export class PostComponent {
       id: {
         title: 'ID',
         type: 'number',
+        // filter: true,
       },
       firstName: {
         title: 'First Name',
