@@ -50,10 +50,10 @@ public class PostController {
 
 	}
 
-	@PostMapping("/post")
+	@PostMapping("/create")
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@ResponseBody
-	public ResponseEntity postRole(@RequestBody PostDTO data) {
+	public ResponseEntity createPost(@RequestBody PostDTO data) {
 		try {
 			service.post(data);
 			return new ResponseEntity<>(HttpStatus.OK);
@@ -65,10 +65,10 @@ public class PostController {
 
 	}
 
-	@PutMapping("/post/{id}")
+	@PutMapping("/update/{id}")
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@ResponseBody
-	public ResponseEntity updateRole(@RequestBody PostDTO data, @PathVariable(value = "id") String id) {
+	public ResponseEntity updatePost(@RequestBody PostDTO data, @PathVariable(value = "id") String id) {
 		try {
 			service.update(data, id);
 			return new ResponseEntity<>(HttpStatus.OK);
@@ -80,7 +80,7 @@ public class PostController {
 
 	}
 
-	@GetMapping("/posts/count")
+	@GetMapping("/count")
 	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity<String> count() {
@@ -96,7 +96,7 @@ public class PostController {
 		}
 	}
 
-	@GetMapping("/post/{id}")
+	@GetMapping("/{id}")
 	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity getById(@PathVariable String id) {
@@ -113,7 +113,7 @@ public class PostController {
 		}
 	}
 
-	@DeleteMapping("/post/{id}")
+	@DeleteMapping("/{id}")
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public ResponseEntity<String> delete(@PathVariable String id) {
 
