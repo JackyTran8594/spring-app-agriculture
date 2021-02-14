@@ -111,16 +111,11 @@
 		</dependency>
 
 
+		<!-- using jackson-core is better than jackson-databind => this is the old version -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<!-- working -->
-			<version>2.10.3</version>
-			<!-- end -->
-
-			<!-- not working  -->
-			<!-- <version>2.12.0</version> -->
-			<!-- end -->
+			<artifactId>jackson-core</artifactId>				
+			<version>2.12.1</version>
 		</dependency>
 
 
@@ -210,8 +205,10 @@
 					<verbose>true</verbose>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.1.0</version>
 				<executions>
 					<execution>
 						<id>copy-resources</id>
@@ -220,7 +217,7 @@
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${basedir}/target/classes/static/</outputDirectory>
+							<outputDirectory>${basedir}/src/main/resources/static/</outputDirectory>
 							<resources>
 								<resource>
 									<directory>${basedir}/app-agriculture/dist/app-agriculture</directory>

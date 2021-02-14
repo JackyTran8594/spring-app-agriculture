@@ -60,19 +60,25 @@ public class ApplicationSecurityConfigurerAdapter extends WebSecurityConfigurerA
     // TODO Auto-generated method stub
 
     // catching authentication error
-    http.exceptionHandling().authenticationEntryPoint(unauthorizedHandlder);
+    // http.exceptionHandling().authenticationEntryPoint(unauthorizedHandlder);
 
     // create session policy => using stateless
     http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
     http.authorizeRequests().antMatchers("/auth/token").permitAll().antMatchers("/auth/refreshToken").permitAll()
-        .antMatchers("/api/user/**").permitAll()
+        .antMatchers("/api/*").permitAll()
+        .antMatchers("/api/**/*").permitAll()
         // access index of angular app in resources static
-        .antMatchers("/*").permitAll().anyRequest().authenticated();
+        .antMatchers("/*").permitAll()
+        .antMatchers("/**/*").permitAll()
+        .anyRequest().authenticated()
+     
+        
     ;
 
     // add filter for spring security
     http.addFilterAfter(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+
 
     http.csrf().disable();
   }
