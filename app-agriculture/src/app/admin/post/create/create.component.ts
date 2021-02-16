@@ -1,3 +1,4 @@
+import { TemplateRef, ViewChild } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { NbDialogRef, NbDialogService, NbWindowRef } from '@nebular/theme';
 import { post } from '../post.dto';

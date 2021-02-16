@@ -68,16 +68,16 @@ export class PostComponent {
   }
 
   ngOnInit() {
-    this.service.getAll().subscribe(
-      data => {
-        this.source = new LocalDataSource(data);
-        console.log('done data!!!')
-      },
-      error => {
-        console.error(error)
-      },
-      () => console.log('done!!!')
-    );
+    // this.service.getAll().subscribe(
+    //   data => {
+    //     this.source = new LocalDataSource(data);
+    //     console.log('done data!!!')
+    //   },
+    //   error => {
+    //     console.error(error)
+    //   },
+    //   () => console.log('done!!!')
+    // );
 
   }
 
