@@ -71,10 +71,11 @@ public class ApplicationSecurityConfigurerAdapter extends WebSecurityConfigurerA
         // access index of angular app in resources static
         .antMatchers("/*").permitAll()
         .antMatchers("/**/*").permitAll()
-        .anyRequest().authenticated()
-     
-        
+        .anyRequest().authenticated()        
     ;
+
+    // enable cors
+    http.cors();
 
     // add filter for spring security
     http.addFilterAfter(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);

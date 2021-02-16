@@ -14,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -36,7 +37,7 @@ public class PostController {
 	private static final Logger LOGGER = LogManager.getLogger(PostController.class);
 
 	@GetMapping("/getAll")
-	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
+	// @PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity getAll() {
 		try {
@@ -51,7 +52,7 @@ public class PostController {
 	}
 
 	@PostMapping("/create")
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	// @PreAuthorize("hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity createPost(@RequestBody PostDTO data) {
 		try {
@@ -66,7 +67,7 @@ public class PostController {
 	}
 
 	@PutMapping("/update/{id}")
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	// @PreAuthorize("hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity updatePost(@RequestBody PostDTO data, @PathVariable(value = "id") String id) {
 		try {
@@ -81,7 +82,7 @@ public class PostController {
 	}
 
 	@GetMapping("/count")
-	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
+	// @PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity<String> count() {
 		try {
@@ -97,7 +98,7 @@ public class PostController {
 	}
 
 	@GetMapping("/{id}")
-	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
+	// @PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
 	@ResponseBody
 	public ResponseEntity getById(@PathVariable String id) {
 		try {
@@ -114,7 +115,7 @@ public class PostController {
 	}
 
 	@DeleteMapping("/{id}")
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	// @PreAuthorize("hasRole('ROLE_ADMIN')")
 	public ResponseEntity<String> delete(@PathVariable String id) {
 
 		try {

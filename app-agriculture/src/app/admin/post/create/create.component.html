@@ -1,0 +1,27 @@
+<nb-card>
+    <nb-card-header>Create Post</nb-card-header>
+    <nb-card-body>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1" class="label">Title</label>
+                <input type="email" nbInput fullWidth id="exampleInputEmail1" placeholder="Email" [(ngModel)]="item.title">
+            </div>
+            <div class="form-group">
+                <label for="test1" class="label">Content</label>
+                <input type="password" nbInput fullWidth id="test1" placeholder="Content" [(ngModel)]="item.content">
+            </div>
+            <div class="form-group">
+                <label for="test2" class="label">Note</label>
+                <input type="text" nbInput fullWidth id="test2" placeholder="Note" [(ngModel)]="item.note">
+            </div>
+            <div class="form-group">
+                <label for="test3" class="label">Author</label>
+                <input type="text" nbInput fullWidth id="test3" placeholder="Author" [(ngModel)]="item.author">
+            </div>
+        </form>
+    </nb-card-body>
+    <nb-card-footer>
+        <button (ngSubmit)="save(item)" nbButton status="primary">Save</button>
+        <button (click)="dismiss()" nbButton status="danger">Close</button>
+    </nb-card-footer>
+</nb-card>
