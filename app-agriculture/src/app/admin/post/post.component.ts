@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NbDialogService } from '@nebular/theme';
+import { NbDialogService, NbWindowService } from '@nebular/theme';
 import { LocalDataSource } from 'ng2-smart-table';
 import { CreateComponent } from './create/create.component';
 import { PostService } from './post.service';
@@ -63,7 +63,7 @@ export class PostComponent {
   source: LocalDataSource;
 
 
-  constructor(private service: PostService, private dialogService: NbDialogService) {
+  constructor(private service: PostService, private dialogService: NbDialogService, private WindowService: NbWindowService) {
     // this.source = new LocalDataSource(POSTS)
   }
 
@@ -108,6 +108,8 @@ export class PostComponent {
 
 
   openCreatForm() {
-    this.dialogService.open(CreateComponent, {hasBackdrop: true, closeOnBackdropClick: false})
+    // this.dialogService.open(CreateComponent, {hasBackdrop: true, closeOnBackdropClick: false})
+    this.WindowService.open(CreateComponent, {hasBackdrop: true, closeOnBackdropClick: false})
+
   }
 }

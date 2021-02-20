@@ -11,7 +11,9 @@ import { PostService } from '../post.service';
 })
 export class CreateComponent {
 
-  constructor(private service: PostService, protected dialogRef: NbDialogRef<any>) { }
+  constructor(private service: PostService, 
+    // protected dialogRef: NbDialogRef<any>,
+     private windowRef: NbWindowRef) { }
 
   item :post
 
@@ -23,6 +25,8 @@ export class CreateComponent {
 
   //closed form or redirect to main page
   dismiss() {
-    this.dialogRef.close();
+    // this.dialogRef.close();
+    this.windowRef.close();
+
   }
 }

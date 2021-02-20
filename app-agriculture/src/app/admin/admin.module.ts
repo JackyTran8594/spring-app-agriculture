@@ -22,6 +22,7 @@ import { PostModule } from './post/post.module';
     NbEvaIconsModule,
     PostModule,
     NbDialogModule.forChild(),
+    NbWindowModule.forChild()
   ],
   providers: [NbThemeService, NbSidebarService]
 })
