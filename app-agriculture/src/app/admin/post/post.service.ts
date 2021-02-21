@@ -40,6 +40,10 @@ export class PostService {
     return this.http.put(BACKEND_URL + '/update' + item.id, body, httpOptions);
   }
 
+  detailPost(id) {
+    return this.http.delete(BACKEND_URL + '/detail' + id, httpOptions);
+  }
+
   deletePost(id) {
     return this.http.delete(BACKEND_URL + '/delete' + id, httpOptions);
   }

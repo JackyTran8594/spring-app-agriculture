@@ -20,13 +20,13 @@ export class CreateComponent {
 
   save(item) {
     this.service.createPost(item);
-    this.dismiss()
+    this.close()
   }
 
   //closed form or redirect to main page
-  dismiss() {
+  close() {
     // this.dialogRef.close();
-    this.windowRef.close();
+    // this.windowRef.close();
 
   }
 }
