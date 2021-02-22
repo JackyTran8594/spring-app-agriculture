@@ -9,7 +9,7 @@ import { PostService } from '../post.service';
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.css']
 })
-export class CreateComponent {
+export class CreateComponent  implements OnInit  {
 
   constructor(private service: PostService, 
 
@@ -27,4 +27,6 @@ export class CreateComponent {
   close() {
 
   }
+
+  ngOnInit() {}
 }

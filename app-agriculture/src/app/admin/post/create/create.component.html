@@ -1,7 +1,7 @@
-<!-- <div class="card-size"> -->
 <nb-card>
     <nb-card-header>Create Post</nb-card-header>
     <nb-card-body>
+        <!-- <div class="row"> -->
         <form>
             <div class="form-group">
                 <label for="exampleInputEmail1" class="label">Title</label>
@@ -20,6 +20,7 @@
                 <input class="form-control" type="text" nbInput fullWidth id="test3" placeholder="Author" [(ngModel)]="item.author">
             </div>
         </form>
+        <!-- </div> -->
     </nb-card-body>
     <nb-card-footer class="example-items-rows">
         <button (click)="save(item) " nbButton status="primary" size="medium">Save</button>
@@ -27,4 +28,3 @@
         <button (click)="close() " nbButton status="danger" size="medium">Close</button>
     </nb-card-footer>
 </nb-card>
-<!-- </div> -->
