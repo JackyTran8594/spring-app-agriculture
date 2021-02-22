@@ -10,13 +10,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostService } from './post.service';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { IndexComponent } from './index/index.component';
 
 
 
 const routes: Routes = [
-  { path: 'create', component: CreateComponent, pathMatch: 'full' },
-  { path: 'edit', component: UpdateComponent, pathMatch: 'full' },
-  { path: 'detail', component: UpdateComponent, pathMatch: 'full' }
+  {
+    path: '', component: PostComponent, children: [
+      { path: '', redirectTo: 'index', pathMatch: 'full' },
+      { path: 'index', component: IndexComponent, pathMatch: 'full' },
+      { path: 'create', component: CreateComponent, pathMatch: 'full' },
+      { path: 'update', component: UpdateComponent, pathMatch: 'full' },
+      { path: 'detail', component: DetailComponent, pathMatch: 'full' }
+    ]
+  }
 ]
 
 @NgModule({
@@ -24,7 +31,8 @@ const routes: Routes = [
     RouterModule.forChild(routes)
 
   ],
+  exports: [RouterModule],
   providers: []
 }
 )
-export class PostModule { }
+export class PostRoutingModule { }

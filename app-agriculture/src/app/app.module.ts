@@ -13,6 +13,7 @@ import { NbIconModule, NbMenuModule, NbSidebarModule, NbThemeModule } from '@neb
   imports: [
     BrowserModule,
     AppRoutingModule,   
+    NbSidebarModule.forRoot(),
     NbMenuModule.forRoot(),
     NbThemeModule.forRoot()
   ],
