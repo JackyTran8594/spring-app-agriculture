@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NbIconModule, NbMenuModule, NbSidebarModule, NbThemeModule } from '@nebular/theme';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NbIconModule, NbMenuModule, NbSidebarModule, NbThemeModule } from '@neb
     AppRoutingModule,   
     NbSidebarModule.forRoot(),
     NbMenuModule.forRoot(),
-    NbThemeModule.forRoot()
+    NbThemeModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
