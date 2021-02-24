@@ -7,10 +7,11 @@ import { PostService } from './post.service';
 
 @Component({
   selector: 'app-post',
-  templateUrl: './post.component.html'
-
+  template: `
+  <router-outlet></router-outlet>
+  `
 })
 export class PostComponent {
 
-  
+
 }

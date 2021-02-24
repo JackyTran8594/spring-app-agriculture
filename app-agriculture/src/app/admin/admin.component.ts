@@ -10,12 +10,7 @@ import { ADMIN_MENU  } from './admin-menu';
 
 export class AdminComponent implements OnInit {
 
-  constructor(private readonly sidebarService: NbSidebarService) { }
-
-  toggleSidebar(): boolean {
-    this.sidebarService.toggle();
-    return false;
-  }
+  constructor() { }
 
   menu = ADMIN_MENU;
 
