@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { LocalDataSource } from 'ng2-smart-table';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { POST } from '../post.dto';
 import { PostService } from '../post.service';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+import { POSTS } from '../../utils/post';
+
 
 @Component({
   selector: 'app-index',
@@ -8,56 +12,21 @@ import { PostService } from '../post.service';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+
+  // public posts;
+
   
-  public posts;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  settings = {
-    mode: 'external',
-    hideSubHeader: true,
-    actions: {
-      add: false,
-      edit: false,
-      delete: false,
-      position: 'right',
-    },
+  displayedColumns: string[] = ['Id', 'PostId', 'Title', 'Author'];
 
-    columns: {
-      id: {
-        title: 'ID',
-        type: 'string',
-        filter: false,
-      },
-      postId: {
-        title: 'Post ID',
-        type: 'string',
-        filter: false,
-      },
-      content: {
-        title: 'Content',
-        type: 'string',
-        filter: false,
-      },
-      title: {
-        title: 'Title',
-        type: 'string',
-        filter: false,
-
-      },
-      note: {
-        title: 'Note',
-        type: 'string',
-        filter: false,
-
-      },
-      author: {
-        title: 'Author',
-        type: 'string',
-        filter: false,
-      },
-    },
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
   }
 
-  source: LocalDataSource;
+  dataSource = new MatTableDataSource<POST>(POSTS);
+
+
 
 
   constructor(private service: PostService) {
@@ -78,29 +47,6 @@ export class IndexComponent implements OnInit {
 
   }
 
-  onSearch(query: string = '') {
-    this.source.setFilter([
-      // fields we want to include in the search
-      {
-        field: 'id',
-        search: query
-      },
-      {
-        field: 'postId',
-        search: query
-      },
-      {
-        field: 'title',
-        search: query
-      },
-      {
-        field: 'author',
-        search: query
-      }
-    ], false);
-    // second parameter specifying whether to perform 'AND' or 'OR' search 
-    // (meaning all columns should contain search query or at least one)
-    // 'AND' by default, so changing to 'OR' by setting false here
-  }
+
 
 }

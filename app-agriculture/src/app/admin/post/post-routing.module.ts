@@ -11,7 +11,7 @@ import { IndexComponent } from './index/index.component';
 const routes: Routes = [
   {
     path: '', component: PostComponent, children: [
-      { path: '', redirectTo: 'create', pathMatch: 'full' },
+      { path: '', redirectTo: 'index', pathMatch: 'full' },
       { path: 'index', component: IndexComponent, pathMatch: 'full' },
       { path: 'create', component: CreateComponent, pathMatch: 'full' },
       { path: 'update', component: UpdateComponent, pathMatch: 'full'},

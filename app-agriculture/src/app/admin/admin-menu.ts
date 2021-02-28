@@ -3,31 +3,31 @@
 export const ADMIN_MENU: any[] = [
     {
         title: 'Post',
-        icon: 'book-open-outline',
+        icon: 'post_add',
         link: 'admin/post',
         home: true
     },
     {
         title: 'Category',
-        icon: 'list-outline',
+        icon: 'category',
         link: 'admin/category',
     }
     ,
     {
         title: 'Role',
-        icon: 'lock-outline',
+        icon: 'settings_accessibility',
         link: 'admin/role',
     }
     ,
     {
         title: 'Tag',
-        icon: 'pricetags-outline',
+        icon: 'tag',
         link: 'admin/tag',
     }
     ,
     {
         title: 'User',
-        icon: 'people-outline',
+        icon: 'account_circle',
         link: 'admin/user',
     }
 ]

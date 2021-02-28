@@ -11,16 +11,23 @@ import { FormsModule } from '@angular/forms';
 import { PostRoutingModule } from '../post/post-routing.module';
 import { IndexComponent } from './index/index.component';
 
+import { MatCardModule } from '@angular/material/card';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
+
+
 
 
 @NgModule({
   declarations: [PostComponent, CreateComponent, DetailComponent, UpdateComponent, IndexComponent],
   imports: [
     CommonModule,
-    Ng2SmartTableModule,
     HttpClientModule,
     FormsModule,
-    PostRoutingModule
+    PostRoutingModule,
+    MatCardModule,
+    MatPaginatorModule,
+    MatTableModule
   ],
   providers: [PostService]
 }
