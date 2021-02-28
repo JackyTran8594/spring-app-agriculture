@@ -1,7 +1,6 @@
-import { NbMenuItem } from '@nebular/theme';
 
 
-export const ADMIN_MENU: NbMenuItem[] = [
+export const ADMIN_MENU: any[] = [
     {
         title: 'Post',
         icon: 'book-open-outline',

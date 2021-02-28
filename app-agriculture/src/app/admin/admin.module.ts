@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
-import { NbDialogModule, NbIconModule, NbLayoutModule, NbMenuModule, NbSidebarModule, NbSidebarService, NbThemeModule, NbThemeService, NbWindowModule, NbWindowRef, NbWindowService } from '@nebular/theme';
-import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { PostModule } from './post/post.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -15,15 +13,9 @@ import { PostModule } from './post/post.module';
   imports: [
     CommonModule,
     AdminRoutingModule,
-    NbIconModule,           
-    NbLayoutModule,
-    NbMenuModule,
-    NbSidebarModule,
-    NbEvaIconsModule,
     PostModule,
-    NbDialogModule.forChild(),
-    NbWindowModule.forChild()
+    MatSidenavModule
   ],
-  providers: [NbThemeService, NbSidebarService]
+  providers: []
 })
 export class AdminModule { }

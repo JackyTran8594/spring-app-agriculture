@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NbMenuItem, NbSidebarService } from '@nebular/theme';
 import { ADMIN_MENU  } from './admin-menu';
 
 @Component({
@@ -11,6 +10,8 @@ import { ADMIN_MENU  } from './admin-menu';
 export class AdminComponent implements OnInit {
 
   constructor() { }
+
+  opened: boolean;
 
   menu = ADMIN_MENU;
 
