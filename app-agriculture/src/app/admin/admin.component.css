@@ -1,12 +1,12 @@
 .sidenav {
-    width: 20%;
+    width: 15%;
     box-sizing: none;
-    background-color: #eeeeee;
-    border-color: #eeeeee;
+    background-color: #1976d2;
+    border-color: #1976d2;
 }
 
 .sidenav-header {
-    background-color: #eeeeee;
+    background-color: #1976d2;
     /* border-color: #eeeeee;  */
 }
 
