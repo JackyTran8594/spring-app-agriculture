@@ -1,6 +1,6 @@
 import { TemplateRef, ViewChild } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { POST } from '../post.dto';
+import { post } from '../post.dto';
 import { PostService } from '../post.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class CreateComponent  implements OnInit  {
 
      ) { }
 
-  item :POST
+  item :post
 
 
   save(item) {

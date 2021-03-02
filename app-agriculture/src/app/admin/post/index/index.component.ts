@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { POST } from '../post.dto';
+import { LocalDataSource } from 'ng2-smart-table';
 import { PostService } from '../post.service';
-// import { MatPaginator } from '@angular/material/paginator';
-// import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { POSTS } from '../../utils/post';
 
 
@@ -12,11 +12,8 @@ import { POSTS } from '../../utils/post';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-
-  // public posts;
-
   
-  // @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   displayedColumns: string[] = ['Id', 'PostId', 'Title', 'Author','Action'];
 
@@ -47,6 +44,8 @@ export class IndexComponent implements OnInit {
 
   }
 
-
+  onSearch(query: string = '') {
+   
+  }
 
 }

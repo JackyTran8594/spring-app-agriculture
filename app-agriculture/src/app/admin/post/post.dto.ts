@@ -1,7 +1,7 @@
-export interface POST {
+export interface post {
     id: string;
     postId: string;
-    content?: string;
+    content: string;
     title: string;
     note: string;
     author: string;

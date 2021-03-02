@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { POST } from '../post.dto';
+import { post } from '../post.dto';
 import { PostService } from '../post.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class DetailComponent implements OnInit {
 
   @Input() postId: string;
 
-  item: POST
+  item: post
 
   //closed form or redirect to main page
   close() {

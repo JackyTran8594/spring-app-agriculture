@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { POST } from '../post.dto';
+import { post } from '../post.dto';
 import { PostService } from '../post.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class UpdateComponent implements OnInit {
 
   @Input() id: string; // decorate the property with @Input()
 
-  item: POST
+  item: post
 
 
   save(item) {

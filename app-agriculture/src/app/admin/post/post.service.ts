@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry, tap } from 'rxjs/operators';
 import { HttpService } from '../../share/api.url';
-import { POST } from './post.dto';
+import { post } from './post.dto';
 import { MessageService } from '../../share/message.service'
 import { of } from 'rxjs';
 import { HandleErrorService } from '../../share/handleError.service';
@@ -23,19 +23,19 @@ export class PostService {
 
   }
 
-  getAll(): Observable<POST[]> {
-    return this.http.get<POST[]>(BACKEND_URL + '/getAll')
+  getAll(): Observable<post[]> {
+    return this.http.get<post[]>(BACKEND_URL + '/getAll')
       .pipe(catchError(
-        this.handleErrorService.handleError<POST[]>('getHeroes', [])
+        this.handleErrorService.handleError<post[]>('getHeroes', [])
       ))
   }
 
-  createPost(item: POST): Observable<POST> {
+  createPost(item: post): Observable<post> {
     let body = JSON.stringify(item);
-    return this.http.post<POST>(BACKEND_URL + '/post', body, httpOptions);
+    return this.http.post<post>(BACKEND_URL + '/post', body, httpOptions);
   }
 
-  updatePost(item: POST) {
+  updatePost(item: post) {
     let body = JSON.stringify(item);
     return this.http.put(BACKEND_URL + '/update' + item.id, body, httpOptions);
   }

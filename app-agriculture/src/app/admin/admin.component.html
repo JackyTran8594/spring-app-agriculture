@@ -1,3 +1,9 @@
-<div class="container-fluid">
-
-</div>
+<!-- Creates a layout with a left-positioned sidenav and explicit content. -->
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened">Start</mat-sidenav>
+    <mat-sidenav-content>
+        <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+        <p>this is layout</p>
+        Main
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
 import { PostModule } from './post/post.module';
-import { MaterialModule } from './material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -13,9 +14,8 @@ import { MaterialModule } from './material.module';
     CommonModule,
     AdminRoutingModule,
     PostModule,
-    MaterialModule
+    MatSidenavModule
   ],
-  providers: [],
-  bootstrap: [AdminComponent]
+  providers: []
 })
 export class AdminModule { }
