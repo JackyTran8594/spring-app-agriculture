@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
 import { PostModule } from './post/post.module';
-import { MaterialModule } from './material.module';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+// import { MaterialModule } from './material.module';
 
 
 
@@ -13,7 +14,8 @@ import { MaterialModule } from './material.module';
     CommonModule,
     AdminRoutingModule,
     PostModule,
-    MaterialModule
+    MDBBootstrapModule
+    // MaterialModule
   ],
   providers: [],
   bootstrap: [AdminComponent]
