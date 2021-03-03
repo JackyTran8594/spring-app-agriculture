@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { LocalDataSource } from 'ng2-smart-table';
-import { PostService } from '../post.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { POSTS } from '../../utils/post';
-
+import { LocalDataSource } from 'ng2-smart-table';
+import { POST } from '../post.dto';
+import { POSTS } from '../../utils/post'
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-index',
@@ -18,10 +18,10 @@ export class IndexComponent implements OnInit {
   displayedColumns: string[] = ['Id', 'PostId', 'Title', 'Author','Action'];
 
   ngAfterViewInit() {
-    // this.dataSource.paginator = this.paginator;
+    this.dataSource.paginator = this.paginator;
   }
 
-  // dataSource = new MatTableDataSource<POST>(POSTS);
+  dataSource = new MatTableDataSource<POST>(POSTS);
 
 
 

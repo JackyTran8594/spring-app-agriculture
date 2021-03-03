@@ -11,7 +11,7 @@ export class AdminComponent implements OnInit {
 
   constructor() { }
 
-  opened: boolean;
+  opened: boolean = true;
 
   menu = ADMIN_MENU;
 

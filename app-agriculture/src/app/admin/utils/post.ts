@@ -1,6 +1,6 @@
-import { post } from '../post/post.dto';
+import { POST } from '../post/post.dto';
 
-export const POSTS: post[] = [
+export const POSTS: POST[] = [
     { id: '1', postId: '4', content: 'a', title: 'sadads', note: 'zcxzx', author: 'Dr Nice' },
     { id: '1', postId: '12133', content: 'b', title: 'sadads', note: 'zcxzx', author: 'Bombasto' },
     { id: '1', postId: '11133', content: 'asdvad', title: 'sadads', note: 'zcxzx', author: 'Narco' },
