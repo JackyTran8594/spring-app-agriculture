@@ -220,7 +220,7 @@
 							<outputDirectory>${basedir}/src/main/resources/static/</outputDirectory>
 							<resources>
 								<resource>
-									<directory>${basedir}/app-agriculture/dist/app-agriculture</directory>
+									<directory>${basedir}/ngx-admin/dist</directory>
 								</resource>
 							</resources>
 						</configuration>
